@@ -49,7 +49,7 @@ Introducción</rem:name>
 </rem:version>
 <rem:comments>
 Ninguno</rem:comments>
-<rem:text>Este documento contiene los requisitos del sistema de información de...</rem:text>
+<rem:text>Este documento contiene los requisitos del sistema de información de la aplicación acerca del E-commerce dedicado a la venta de alimentos derivados de la apicultura.</rem:text>
 </rem:paragraph>
 </rem:section>
 <rem:section
@@ -86,6 +86,7 @@ César Salazar</rem:name>
 Ninguno</rem:comments>
 <rem:stakeholderRole>Análista de Sistemas</rem:stakeholderRole>
 <rem:isDeveloper/>
+<rem:worksFor organization = "ORG-0001"/>
 </rem:stakeholder>
 <rem:stakeholder
  oid = "STK-0002">
@@ -104,6 +105,7 @@ Alexis Cañar</rem:name>
 Ninguno</rem:comments>
 <rem:stakeholderRole>Análista de Sistemas</rem:stakeholderRole>
 <rem:isDeveloper/>
+<rem:worksFor organization = "ORG-0001"/>
 </rem:stakeholder>
 <rem:stakeholder
  oid = "STK-0003">
@@ -122,6 +124,7 @@ Vanessa Iñiguez</rem:name>
 Ninguno</rem:comments>
 <rem:stakeholderRole>Análista de Sistemas</rem:stakeholderRole>
 <rem:isDeveloper/>
+<rem:worksFor organization = "ORG-0001"/>
 </rem:stakeholder>
 <rem:stakeholder
  oid = "STK-0004">
@@ -140,6 +143,7 @@ Daniel Patiño</rem:name>
 Ninguno</rem:comments>
 <rem:stakeholderRole>Análista de Sistemas</rem:stakeholderRole>
 <rem:isDeveloper/>
+<rem:worksFor organization = "ORG-0001"/>
 </rem:stakeholder>
 <rem:stakeholder
  oid = "STK-0005">
@@ -158,7 +162,27 @@ Brayan Collaguazo</rem:name>
 Ninguno</rem:comments>
 <rem:stakeholderRole>Análista de Sistemas</rem:stakeholderRole>
 <rem:isDeveloper/>
+<rem:worksFor organization = "ORG-0001"/>
 </rem:stakeholder>
+<rem:organization
+ oid = "ORG-0001">
+<rem:name>
+UNL</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:address>La Argelía</rem:address>
+<rem:telephone>N/A</rem:telephone>
+<rem:fax>N/A</rem:fax>
+</rem:organization>
 </rem:section>
 <rem:section
  oid = "SEC-0003">
@@ -177,6 +201,40 @@ Descripción del Sistema Actual</rem:name>
 Ninguno</rem:comments>
 <rem:level>1</rem:level>
 <rem:number>3 </rem:number>
+<rem:paragraph
+ oid = "PRG-0002">
+<rem:name>
+Situación actual</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>El proceso que se lleva a cabo para poner el producto a la venta es el siguiente: primeramente, el cliente se pondrá en contacto con un <rem:ref oid="GLO-0013">distribuidor</rem:ref> de COLMENAR a través de una red social, posterior a esto se hace el pedido de los productos, para esto es de vital importancia el tener la dirección exacta del cliente, así mismos números de teléfonos, nombres completos y referencias para poder hacer llegar eficientemente el producto.</rem:text>
+</rem:paragraph>
+<rem:paragraph
+ oid = "PRG-0003">
+<rem:name>
+Problemas generados</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Los problemas actuales que existen en el sistema son los siguientes:<br/>*No se cuenta con un manejo integral y ordenado de la información de los clientes que permita conocer quiénes son los clientes que han comprado varios productos para ofrecerles descuentos, promociones o saber sus preferencias.<br/>*Las existencias no concuerdan con las anotaciones.<br/>*Los clientes cancelan los pedidos cuando estos ya han sido preparados para la distribución.<br/>Inconvenientes con los pagos físicos tales como no tenencia de dinero físico, la pérdida del dinero, pagó con billetes falsos y que no siempre se posee cambio.<br/>*Traspapeleo de las facturas.</rem:text>
+</rem:paragraph>
 </rem:section>
 <rem:section
  oid = "SEC-0008">
@@ -195,6 +253,600 @@ Objetivos del Sistema</rem:name>
 Ninguno</rem:comments>
 <rem:level>1</rem:level>
 <rem:number>4 </rem:number>
+<rem:objective
+ oid = "OBJ-0001">
+<rem:name>
+Guardar clientes</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+guardar los datos de los clientes. </rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0002">
+<rem:name>
+Modificar datos de los clientes</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+modificar los datos informativos de los clientes.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0003">
+<rem:name>
+Clasificar clientes</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+clasificar clientes por compras frecuentes.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0004">
+<rem:name>
+Listar clientes</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+listar a los clientes de acuerdo a criterios de búsqueda.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0005">
+<rem:name>
+Desactivar cliente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+desactivar cuenta del cliente.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0006">
+<rem:name>
+Registrar producto</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+registrar los datos del producto.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0007">
+<rem:name>
+Modificar producto</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+modificar los datos del producto.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0008">
+<rem:name>
+Listar productos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+listar los productos.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0009">
+<rem:name>
+Dar de baja un producto</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+dar de baja un producto</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0010">
+<rem:name>
+Calcular productos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+calcular el número de productos disponibles en el <rem:ref oid="GLO-0006">inventario</rem:ref>.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0011">
+<rem:name>
+Notificar stock</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+notificar al <rem:ref oid="GLO-0013">distribuidor</rem:ref> en el caso de que el número de productos en el <rem:ref oid="GLO-0006">inventario</rem:ref> sea menor o igual a 5.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0012">
+<rem:name>
+Registrar venta</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+registrar los datos de la venta.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0013">
+<rem:name>
+Clasificar productos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+clasificar los productos por mayor y menor número de ventas.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0014">
+<rem:name>
+Listar ventas</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+listar las ventas de acuerdo a los criterios de búsqueda.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0015">
+<rem:name>
+Generar reporte</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+generar reporte de las ventas del día.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0016">
+<rem:name>
+Establecer límite de pedido</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+establecer un límite de tiempo para que el cliente pueda <rem:ref oid="GLO-0018">cancelar</rem:ref> el pedido.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0017">
+<rem:name>
+Contabilizar cancelación de pedidos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+contabilizar las veces que un cliente cancela un pedido.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0018">
+<rem:name>
+Bloquear usuario</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+bloquear a un usuario  que haya cancelado los pedidos en reiteradas ocasiones.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0019">
+<rem:name>
+Notificar ventas no completadas</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+notificar las ventas que aún no han sido completadas.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0020">
+<rem:name>
+Implementar métodos de pago</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+implementar métodos de pago en línea mediante tarjeta de débito, crédito y transferencia bancaria.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0021">
+<rem:name>
+Almacenar medios de pago</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+almacenar los medios de pago.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0022">
+<rem:name>
+Encriptar datos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+encriptar la información personal del usuario</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0023">
+<rem:name>
+Eliminar medio de pago</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+eliminar de manera lógica los datos del medio de pago.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0024">
+<rem:name>
+Generar facturas</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+generar las facturas.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0025">
+<rem:name>
+Organizar facturas</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+organizar las facturas.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0026">
+<rem:name>
+Implementar factura electrónica</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+implementar métodos de factura electrónica.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0027">
+<rem:name>
+Buscar facturas</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:description>
+buscar las facturas efectuadas con anterioridad.</rem:description>
+</rem:objective>
 </rem:section>
 <rem:section
  oid = "SEC-0004">
@@ -213,6 +865,650 @@ Catálogo de Requisitos del Sistema</rem:name>
 Ninguno</rem:comments>
 <rem:level>1</rem:level>
 <rem:number>5 </rem:number>
+<rem:section
+ oid = "SEC-0009">
+<rem:name>
+Requisitos de información</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>5.1 </rem:number>
+<rem:informationRequirement
+ oid = "IRQ-0001">
+<rem:name>
+Información sobre clientes</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:relevantConcept>
+Los clientes son las personas que se registran en la aplicación para realizar los pedidos de los productos</rem:relevantConcept>
+<rem:averageLifeTime>
+<rem:value>999</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:averageLifeTime>
+<rem:maximumLifeTime>
+<rem:value>999</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:maximumLifeTime>
+<rem:averageOcurrences><rem:value>250</rem:value>
+</rem:averageOcurrences>
+<rem:maximumOcurrences><rem:value>500</rem:value>
+</rem:maximumOcurrences>
+<rem:specificData oid = "DAT-0001">
+<rem:description>
+Nombre</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0002">
+<rem:description>
+Apellido<br/></rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0003">
+<rem:description>
+Cédula</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0004">
+<rem:description>
+Teléfono</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0005">
+<rem:description>
+Correo electrónico</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0006">
+<rem:description>
+Fecha de nacimiento</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+</rem:informationRequirement>
+<rem:informationRequirement
+ oid = "IRQ-0002">
+<rem:name>
+Información sobre medio de pago</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:relevantConcept>
+El medio de pago es el método que utiliza el cliente para <rem:ref oid="GLO-0019">pagar</rem:ref> sus pedidos.</rem:relevantConcept>
+<rem:averageLifeTime>
+<rem:value>999</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:averageLifeTime>
+<rem:maximumLifeTime>
+<rem:value>999</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:maximumLifeTime>
+<rem:averageOcurrences><rem:value>250</rem:value>
+</rem:averageOcurrences>
+<rem:maximumOcurrences><rem:value>500</rem:value>
+</rem:maximumOcurrences>
+<rem:specificData oid = "DAT-0007">
+<rem:description>
+TItular de la cuenta</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0008">
+<rem:description>
+Número de la tarjeta</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+</rem:informationRequirement>
+<rem:informationRequirement
+ oid = "IRQ-0003">
+<rem:name>
+Información sobre ventas</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:relevantConcept>
+Las ventas son los detalles de todos los datos de la compra de uno o varios productos</rem:relevantConcept>
+<rem:averageLifeTime>
+<rem:value>999</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:averageLifeTime>
+<rem:maximumLifeTime>
+<rem:value>999</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:maximumLifeTime>
+<rem:averageOcurrences><rem:value>250</rem:value>
+</rem:averageOcurrences>
+<rem:maximumOcurrences><rem:value>500</rem:value>
+</rem:maximumOcurrences>
+<rem:specificData oid = "DAT-0009">
+<rem:description>
+Cédula del cliente</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0010">
+<rem:description>
+Apellido del cliente</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0011">
+<rem:description>
+Nombre del cliente</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0012">
+<rem:description>
+Dirección del cliente</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0013">
+<rem:description>
+Precio del producto</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0014">
+<rem:description>
+Cantidad del producto</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0015">
+<rem:description>
+Nombre del producto</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0016">
+<rem:description>
+Tipo de producto</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0017">
+<rem:description>
+Valor de entrega</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0018">
+<rem:description>
+Fecha de venta</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0019">
+<rem:description>
+IVA</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0020">
+<rem:description>
+Precio total</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+</rem:informationRequirement>
+<rem:informationRequirement
+ oid = "IRQ-0004">
+<rem:name>
+Información sobre facturas</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:relevantConcept>
+Las facturas es la información de los detalles de la venta, del cliente y del método de pago.</rem:relevantConcept>
+<rem:averageLifeTime>
+<rem:value>999</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:averageLifeTime>
+<rem:maximumLifeTime>
+<rem:value>999</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:maximumLifeTime>
+<rem:averageOcurrences><rem:value>250</rem:value>
+</rem:averageOcurrences>
+<rem:maximumOcurrences><rem:value>500</rem:value>
+</rem:maximumOcurrences>
+<rem:specificData oid = "DAT-0021">
+<rem:description>
+Detalles de venta</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0022">
+<rem:description>
+Fecha de emisión</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0023">
+<rem:description>
+Apellidos del cliente</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0024">
+<rem:description>
+Intervalos de tiempo</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+</rem:informationRequirement>
+<rem:informationRequirement
+ oid = "IRQ-0005">
+<rem:name>
+Información sobre productos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0002"/>
+<rem:stability value = "SBV-0003"/>
+<rem:relevantConcept>
+Los productos son las existencias que están disponibles para la venta.</rem:relevantConcept>
+<rem:averageLifeTime>
+<rem:value>999</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:averageLifeTime>
+<rem:maximumLifeTime>
+<rem:value>999</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:maximumLifeTime>
+<rem:averageOcurrences><rem:value>250</rem:value>
+</rem:averageOcurrences>
+<rem:maximumOcurrences><rem:value>500</rem:value>
+</rem:maximumOcurrences>
+<rem:specificData oid = "DAT-0025">
+<rem:description>
+Nombre</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0026">
+<rem:description>
+Precio</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0027">
+<rem:description>
+Tipo</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0028">
+<rem:description>
+Cantidad</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0029">
+<rem:description>
+Peso neto</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0030">
+<rem:description>
+Descripción</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+</rem:informationRequirement>
+</rem:section>
+<rem:section
+ oid = "SEC-0010">
+<rem:name>
+Requisitos funcionales</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>5.2 </rem:number>
+<rem:section
+ oid = "SEC-0012">
+<rem:name>
+Diagrama de casos de uso</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>5.2.1 </rem:number>
+<rem:graphicFile
+ oid = "GRF-0001">
+<rem:name>
+Principal</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\Principal.png]]>
+</rem:fileName>
+</rem:graphicFile>
+<rem:graphicFile
+ oid = "GRF-0002">
+<rem:name>
+Productos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\Productos.png]]>
+</rem:fileName>
+</rem:graphicFile>
+<rem:graphicFile
+ oid = "GRF-0003">
+<rem:name>
+Ventas</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\Ventas.png]]>
+</rem:fileName>
+</rem:graphicFile>
+<rem:graphicFile
+ oid = "GRF-0004">
+<rem:name>
+Clientes</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\Clientes.png]]>
+</rem:fileName>
+</rem:graphicFile>
+<rem:graphicFile
+ oid = "GRF-0005">
+<rem:name>
+Pago</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\Pago.png]]>
+</rem:fileName>
+</rem:graphicFile>
+<rem:graphicFile
+ oid = "GRF-0006">
+<rem:name>
+Cuenta</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\Cuenta.png]]>
+</rem:fileName>
+</rem:graphicFile>
+</rem:section>
+<rem:section
+ oid = "SEC-0013">
+<rem:name>
+Definición de actores</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>5.2.2 </rem:number>
+<rem:actor
+ oid = "ACT-0001">
+<rem:name>
+Usuario</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0003 STK-0004 STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:actorRole>al usuario que iniciará sesión en el sistema.</rem:actorRole>
+</rem:actor>
+<rem:actor
+ oid = "ACT-0002">
+<rem:name>
+<rem:ref oid="GLO-0013">Distribuidor</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0003 STK-0004 STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:actorRole>a la persona encargada de administrar la aplicación y de controlar sus funciones especiales.</rem:actorRole>
+</rem:actor>
+<rem:actor
+ oid = "ACT-0003">
+<rem:name>
+Cliente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0003 STK-0004 STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:actorRole>a la persona que utilizará la aplicación para realizar las compras.</rem:actorRole>
+</rem:actor>
+<rem:actor
+ oid = "ACT-0004">
+<rem:name>
+Sistema</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0003 STK-0004 STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:actorRole>al sistema.</rem:actorRole>
+</rem:actor>
+</rem:section>
+<rem:section
+ oid = "SEC-0014">
+<rem:name>
+Casos de uso del sistema</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>5.2.3 </rem:number>
+</rem:section>
+</rem:section>
+<rem:section
+ oid = "SEC-0011">
+<rem:name>
+Requisitos no funcionales</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>5.3 </rem:number>
+</rem:section>
 </rem:section>
 <rem:section
  oid = "SEC-0005">
@@ -231,6 +1527,130 @@ Matriz de Rastreabilidad</rem:name>
 Ninguno</rem:comments>
 <rem:level>1</rem:level>
 <rem:number>6 </rem:number>
+<rem:traceabilityMatrix
+ oid = "TRM-0001">
+<rem:name>
+Requisitos de información y funcionales</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:tr>
+<rem:th/>
+<rem:th oid ="IRQ-0001"/>
+<rem:th oid ="IRQ-0002"/>
+<rem:th oid ="IRQ-0003"/>
+<rem:th oid ="IRQ-0004"/>
+<rem:th oid ="IRQ-0005"/>
+</rem:tr>
+</rem:traceabilityMatrix>
+<rem:traceabilityMatrix
+ oid = "TRM-0002">
+<rem:name>
+Objetivos y requisitos funcionales</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:tr>
+<rem:th/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0001"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0002"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0003"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0004"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0005"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0006"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0007"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0008"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0009"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0010"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0011"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0012"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0013"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0014"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0015"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0016"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0017"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0018"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0019"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0020"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0021"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0022"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0023"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0024"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0025"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0026"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="OBJ-0027"/>
+</rem:tr>
+</rem:traceabilityMatrix>
 </rem:section>
 <rem:section
  oid = "SEC-0006">
@@ -249,6 +1669,278 @@ Glosario de Términos</rem:name>
 Ninguno</rem:comments>
 <rem:level>1</rem:level>
 <rem:number>7 </rem:number>
+<rem:glossaryItem
+ oid = "GLO-0004">
+<rem:name>
+<rem:ref oid="GLO-0004">Recargo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Aumento de la cantidad de dinero que hay que <rem:ref oid="GLO-0019">pagar</rem:ref> en un impuesto, cuota, deuda, etc.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0005">
+<rem:name>
+<rem:ref oid="GLO-0005">Contraentrega</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Se trata de un sistema fácil y seguro para cerrar una transacción en efectivo al momento de recibir un pedido.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0006">
+<rem:name>
+<rem:ref oid="GLO-0006">Inventario</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>La cantidad de productos en stock de la empresa.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0007">
+<rem:name>
+<rem:ref oid="GLO-0007">Despachar</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Vender una mercancía.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0008">
+<rem:name>
+<rem:ref oid="GLO-0008">Adquisición</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Comprar una cosa, especialmente algo a lo que se atribuye un cierto valor.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0009">
+<rem:name>
+<rem:ref oid="GLO-0009">Encomienda</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Encargo o petición que una persona hace a otra de que realice determinada tarea o de que se encargue de algo o alguien.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0010">
+<rem:name>
+<rem:ref oid="GLO-0010">Control de Ventas</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Proceso de monitoreo y gestión de todo lo que es vendido en tu negocio y de análisis de esos datos, o sea, para quién fue realizada la venta y cómo ocurrió el flujo comercial.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0011">
+<rem:name>
+<rem:ref oid="GLO-0011">Postventa</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Etapa de la atención al cliente y se refiere a todas las estrategias utilizadas para ofrecer una buena experiencia para un cliente después del cierre de la compra, con enfoque en la relación.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0012">
+<rem:name>
+<rem:ref oid="GLO-0012">Gerente de abastecimiento</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Dirige las compras de una organización. Responsable de ubicar fuentes de abastecimiento de recursos, seleccionar proveedores, negociar contrataciones.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0013">
+<rem:name>
+<rem:ref oid="GLO-0013">Distribuidor</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0014">
+<rem:name>
+<rem:ref oid="GLO-0014">Proveedor</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Dicho de una persona o de una empresa: Que provee o abastece de todo lo necesario para un fin a grandes grupos, asociaciones, comunidades.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0015">
+<rem:name>
+<rem:ref oid="GLO-0015">Precio al público</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Precio que se brinda al cliente para la compra del producto. Es el precio normal.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0016">
+<rem:name>
+<rem:ref oid="GLO-0016">Precio al costo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Valor que la fábrica otorga al producto.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0017">
+<rem:name>
+<rem:ref oid="GLO-0017">Traspapeleo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Perdida o extravío de papeles.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0018">
+<rem:name>
+<rem:ref oid="GLO-0018">Cancelar</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Anular un pedido.<br/></rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0019">
+<rem:name>
+<rem:ref oid="GLO-0019">Pagar</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Dar la cantidad económica que se pide por un producto.</rem:text>
+</rem:glossaryItem>
 </rem:section>
 <rem:section
  oid = "SEC-0007">
@@ -315,48 +2007,6 @@ Ninguno
 </rem:comments>
 </rem:changeRequestsSpecification>
 <rem:predefinedValueTypes>
-<rem:predefinedValueType
- oid = "PVT-0001">
-<rem:name>
-Real</rem:name>
-<rem:version>
-<rem:major>1</rem:major>
-<rem:minor>0</rem:minor>
-<rem:date>
-<rem:year>2000</rem:year>
-<rem:month>10</rem:month>
-<rem:day>30</rem:day>
-</rem:date>
-</rem:version>
-<rem:comments>
-Predefined OCL type</rem:comments>
-<rem:description>
-Real numbers</rem:description>
-<rem:definition>
-(null)
-</rem:definition>
-</rem:predefinedValueType>
-<rem:predefinedValueType
- oid = "PVT-0002">
-<rem:name>
-Integer</rem:name>
-<rem:version>
-<rem:major>1</rem:major>
-<rem:minor>0</rem:minor>
-<rem:date>
-<rem:year>2000</rem:year>
-<rem:month>10</rem:month>
-<rem:day>30</rem:day>
-</rem:date>
-</rem:version>
-<rem:comments>
-Predefined OCL type</rem:comments>
-<rem:description>
-Integer numbers</rem:description>
-<rem:definition>
-(null)
-</rem:definition>
-</rem:predefinedValueType>
 <rem:predefinedValueType
  oid = "PVT-0003">
 <rem:name>
@@ -441,46 +2091,88 @@ Hour:minutes:seconds</rem:description>
 (null)
 </rem:definition>
 </rem:predefinedValueType>
+<rem:predefinedValueType
+ oid = "PVT-0001">
+<rem:name>
+Real</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2000</rem:year>
+<rem:month>10</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Predefined OCL type</rem:comments>
+<rem:description>
+Real numbers</rem:description>
+<rem:definition>
+(null)
+</rem:definition>
+</rem:predefinedValueType>
+<rem:predefinedValueType
+ oid = "PVT-0002">
+<rem:name>
+Integer</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2000</rem:year>
+<rem:month>10</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Predefined OCL type</rem:comments>
+<rem:description>
+Integer numbers</rem:description>
+<rem:definition>
+(null)
+</rem:definition>
+</rem:predefinedValueType>
 </rem:predefinedValueTypes>
 <rem:predefinedValues>
-<rem:changeRequestStatusValue oid = "CRV-0006">
-<rem:name>rechazado</rem:name>
-</rem:changeRequestStatusValue>
-<rem:changeRequestStatusValue oid = "CRV-0002">
-<rem:name>pendiente de análisis</rem:name>
-</rem:changeRequestStatusValue>
 <rem:changeRequestStatusValue oid = "CRV-0005">
 <rem:name>verificado</rem:name>
 </rem:changeRequestStatusValue>
-<rem:changeRequestStatusValue oid = "CRV-0003">
-<rem:name>pendiente de aprobar/rechazar</rem:name>
+<rem:changeRequestStatusValue oid = "CRV-0006">
+<rem:name>rechazado</rem:name>
 </rem:changeRequestStatusValue>
 <rem:changeRequestStatusValue oid = "CRV-0004">
 <rem:name>pendiente de realización</rem:name>
 </rem:changeRequestStatusValue>
+<rem:changeRequestStatusValue oid = "CRV-0003">
+<rem:name>pendiente de aprobar/rechazar</rem:name>
+</rem:changeRequestStatusValue>
 <rem:changeRequestStatusValue oid = "CRV-0001">
 <rem:name>PD</rem:name>
 </rem:changeRequestStatusValue>
-<rem:conflictStatusValue oid = "CSV-0001">
-<rem:name>PD</rem:name>
+<rem:changeRequestStatusValue oid = "CRV-0002">
+<rem:name>pendiente de análisis</rem:name>
+</rem:changeRequestStatusValue>
+<rem:conflictStatusValue oid = "CSV-0004">
+<rem:name>resuelto</rem:name>
 </rem:conflictStatusValue>
 <rem:conflictStatusValue oid = "CSV-0003">
 <rem:name>en proceso de negociación</rem:name>
 </rem:conflictStatusValue>
-<rem:conflictStatusValue oid = "CSV-0004">
-<rem:name>resuelto</rem:name>
+<rem:conflictStatusValue oid = "CSV-0001">
+<rem:name>PD</rem:name>
 </rem:conflictStatusValue>
 <rem:conflictStatusValue oid = "CSV-0002">
 <rem:name>no resuelto</rem:name>
 </rem:conflictStatusValue>
-<rem:defectStatusValue oid = "DSV-0001">
-<rem:name>PD</rem:name>
-</rem:defectStatusValue>
 <rem:defectStatusValue oid = "DSV-0002">
 <rem:name>no eliminado</rem:name>
 </rem:defectStatusValue>
 <rem:defectStatusValue oid = "DSV-0003">
 <rem:name>en proceso de negociación</rem:name>
+</rem:defectStatusValue>
+<rem:defectStatusValue oid = "DSV-0001">
+<rem:name>PD</rem:name>
 </rem:defectStatusValue>
 <rem:defectStatusValue oid = "DSV-0004">
 <rem:name>eliminado</rem:name>
@@ -491,34 +2183,16 @@ Hour:minutes:seconds</rem:description>
 <![CDATA[Por Determinar]]>
 </rem:description>
 </rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0002">
-<rem:name>Ambigüedad</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos, aunque comprensibles, tienen más de una interpretación posible]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0003">
-<rem:name>No necesidad</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no son necesarios porque no contribuyen a satisfacer ninguna necesidad de clientes o usuarios]]>
-</rem:description>
-</rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0004">
 <rem:name>Incomprensibilidad</rem:name>
 <rem:description>
 <![CDATA[El requisito o requisitos no pueden ser entendidos por algún lector]]>
 </rem:description>
 </rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0005">
-<rem:name>No verificabilidad</rem:name>
+<rem:defectTypeValue oid = "DTV-0003">
+<rem:name>No necesidad</rem:name>
 <rem:description>
-<![CDATA[No se puede comprobar que el sistema satisface el requisito o requisitos]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0006">
-<rem:name>Inconsistencia</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no son consistentes, es decir, presentan contradicciones internas o entre varios]]>
+<![CDATA[El requisito o requisitos no son necesarios porque no contribuyen a satisfacer ninguna necesidad de clientes o usuarios]]>
 </rem:description>
 </rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0010">
@@ -533,54 +2207,6 @@ Hour:minutes:seconds</rem:description>
 <![CDATA[El requisito o requisitos no tienen estimada su estabilidad]]>
 </rem:description>
 </rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0015">
-<rem:name>Nivel incorrecto de detalle</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no están expresados con el nivel adecuado de detalle, es decir, son demasiado abstractos o demasiado detallados]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0008">
-<rem:name>Verbosidad excesiva</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos pueden expresarse de forma más concisa sin alterar su significado]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0016">
-<rem:name>No rastreabilidad</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no están trazados hacia sus orígenes, bien requisitos de nivel superior (objetivos), bien clientes y usuarios]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0013">
-<rem:name>Prioridad no establecida</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no tienen establecida su prioridad, es decir, su importancia y su urgencia]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0007">
-<rem:name>No implementabilidad</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no pueden ser implementados con la tecnología actual o dentro de un coste razonable]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0023">
-<rem:name>Otro</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos presentan otro tipo de defecto]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0012">
-<rem:name>Incompleción</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no describen todo lo que el sistema se supone que deberá hacer, no describen las respuestas del sistema a todas las posibles situaciones o incluyen elementos por determinar (PD)]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0009">
-<rem:name>Dependiente del diseño</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos incluyen elementos dependientes del diseño del sistema]]>
-</rem:description>
-</rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0017">
 <rem:name>Organización incorrecta</rem:name>
 <rem:description>
@@ -593,35 +2219,98 @@ Hour:minutes:seconds</rem:description>
 <![CDATA[El requisito o requisitos no se expresan de forma precisa, es decir, usando cantidades numéricas siempre que sea posible con el nivel adecuado de precisión]]>
 </rem:description>
 </rem:defectTypeValue>
-<rem:importanceValue oid = "IMV-0003">
-<rem:name>importante</rem:name>
+<rem:defectTypeValue oid = "DTV-0008">
+<rem:name>Verbosidad excesiva</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos pueden expresarse de forma más concisa sin alterar su significado]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0006">
+<rem:name>Inconsistencia</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no son consistentes, es decir, presentan contradicciones internas o entre varios]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0023">
+<rem:name>Otro</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos presentan otro tipo de defecto]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0005">
+<rem:name>No verificabilidad</rem:name>
+<rem:description>
+<![CDATA[No se puede comprobar que el sistema satisface el requisito o requisitos]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0002">
+<rem:name>Ambigüedad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos, aunque comprensibles, tienen más de una interpretación posible]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0009">
+<rem:name>Dependiente del diseño</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos incluyen elementos dependientes del diseño del sistema]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0012">
+<rem:name>Incompleción</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no describen todo lo que el sistema se supone que deberá hacer, no describen las respuestas del sistema a todas las posibles situaciones o incluyen elementos por determinar (PD)]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0016">
+<rem:name>No rastreabilidad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no están trazados hacia sus orígenes, bien requisitos de nivel superior (objetivos), bien clientes y usuarios]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0015">
+<rem:name>Nivel incorrecto de detalle</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no están expresados con el nivel adecuado de detalle, es decir, son demasiado abstractos o demasiado detallados]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0007">
+<rem:name>No implementabilidad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no pueden ser implementados con la tecnología actual o dentro de un coste razonable]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0013">
+<rem:name>Prioridad no establecida</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no tienen establecida su prioridad, es decir, su importancia y su urgencia]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:importanceValue oid = "IMV-0001">
+<rem:name>PD</rem:name>
 </rem:importanceValue>
 <rem:importanceValue oid = "IMV-0002">
 <rem:name>vital</rem:name>
 </rem:importanceValue>
-<rem:importanceValue oid = "IMV-0001">
-<rem:name>PD</rem:name>
+<rem:importanceValue oid = "IMV-0003">
+<rem:name>importante</rem:name>
 </rem:importanceValue>
 <rem:importanceValue oid = "IMV-0004">
 <rem:name>quedaría bien</rem:name>
 </rem:importanceValue>
+<rem:stabilityValue oid = "SBV-0002">
+<rem:name>baja</rem:name>
+</rem:stabilityValue>
 <rem:stabilityValue oid = "SBV-0003">
 <rem:name>media</rem:name>
 </rem:stabilityValue>
 <rem:stabilityValue oid = "SBV-0001">
 <rem:name>PD</rem:name>
 </rem:stabilityValue>
-<rem:stabilityValue oid = "SBV-0002">
-<rem:name>baja</rem:name>
-</rem:stabilityValue>
 <rem:stabilityValue oid = "SBV-0004">
 <rem:name>alta</rem:name>
 </rem:stabilityValue>
-<rem:statusValue oid = "STV-0001">
-<rem:name>PD</rem:name>
-</rem:statusValue>
-<rem:statusValue oid = "STV-0005">
-<rem:name>validado</rem:name>
+<rem:statusValue oid = "STV-0002">
+<rem:name>en construcción</rem:name>
 </rem:statusValue>
 <rem:statusValue oid = "STV-0003">
 <rem:name>pendiente de verificación</rem:name>
@@ -629,26 +2318,29 @@ Hour:minutes:seconds</rem:description>
 <rem:statusValue oid = "STV-0004">
 <rem:name>pendiente de validación</rem:name>
 </rem:statusValue>
-<rem:statusValue oid = "STV-0002">
-<rem:name>en construcción</rem:name>
+<rem:statusValue oid = "STV-0005">
+<rem:name>validado</rem:name>
 </rem:statusValue>
-<rem:terminationValue oid = "TEV-0001">
+<rem:statusValue oid = "STV-0001">
 <rem:name>PD</rem:name>
-</rem:terminationValue>
+</rem:statusValue>
 <rem:terminationValue oid = "TEV-0002">
 <rem:name>continúa</rem:name>
+</rem:terminationValue>
+<rem:terminationValue oid = "TEV-0001">
+<rem:name>PD</rem:name>
 </rem:terminationValue>
 <rem:terminationValue oid = "TEV-0003">
 <rem:name>queda sin efecto</rem:name>
 </rem:terminationValue>
-<rem:timeUnitValue oid = "TUV-0009">
-<rem:name>hora(s)</rem:name>
-</rem:timeUnitValue>
-<rem:timeUnitValue oid = "TUV-0007">
-<rem:name>semana(s)</rem:name>
+<rem:timeUnitValue oid = "TUV-0008">
+<rem:name>día(s)</rem:name>
 </rem:timeUnitValue>
 <rem:timeUnitValue oid = "TUV-0010">
 <rem:name>minuto(s)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0007">
+<rem:name>semana(s)</rem:name>
 </rem:timeUnitValue>
 <rem:timeUnitValue oid = "TUV-0001">
 <rem:name>PD</rem:name>
@@ -659,8 +2351,11 @@ Hour:minutes:seconds</rem:description>
 <rem:timeUnitValue oid = "TUV-0005">
 <rem:name>mes(es)</rem:name>
 </rem:timeUnitValue>
-<rem:timeUnitValue oid = "TUV-0008">
-<rem:name>día(s)</rem:name>
+<rem:timeUnitValue oid = "TUV-0009">
+<rem:name>hora(s)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0013">
+<rem:name>centésima(s) de segundo</rem:name>
 </rem:timeUnitValue>
 <rem:timeUnitValue oid = "TUV-0014">
 <rem:name>milisegundo(s)</rem:name>
@@ -671,17 +2366,14 @@ Hour:minutes:seconds</rem:description>
 <rem:timeUnitValue oid = "TUV-0012">
 <rem:name>décima(s) de segundo</rem:name>
 </rem:timeUnitValue>
-<rem:timeUnitValue oid = "TUV-0013">
-<rem:name>centésima(s) de segundo</rem:name>
-</rem:timeUnitValue>
 <rem:urgencyValue oid = "URV-0001">
 <rem:name>PD</rem:name>
 </rem:urgencyValue>
-<rem:urgencyValue oid = "URV-0002">
-<rem:name>inmediatamente</rem:name>
-</rem:urgencyValue>
 <rem:urgencyValue oid = "URV-0003">
 <rem:name>hay presión</rem:name>
+</rem:urgencyValue>
+<rem:urgencyValue oid = "URV-0002">
+<rem:name>inmediatamente</rem:name>
 </rem:urgencyValue>
 <rem:urgencyValue oid = "URV-0004">
 <rem:name>puede esperar</rem:name>
