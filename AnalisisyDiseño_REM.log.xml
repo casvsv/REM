@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 <rem:log xmlns:rem="http://rem.lsi.us.es">
 <rem:change>
-<rem:type>U</rem:type>
-<rem:owner>FRQ-0003</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Propiedad [Stability] actualizada [PD] -> [alta]]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>FRQ-0004</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Creación]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>S</rem:type>
-<rem:owner>CHS-0004</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>7</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>DRS-0002</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>7</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento creado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>S</rem:type>
-<rem:owner>DRS-0002</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>7</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
 <rem:type>S</rem:type>
 <rem:owner>CHS-0004</rem:owner><rem:date>
 <rem:year>2020</rem:year>
@@ -55,71 +10,8 @@
 <rem:description><![CDATA[Documento guardado]]></rem:description>
 </rem:change>
 <rem:change>
-<rem:type>U</rem:type>
-<rem:owner>FRQ-0004</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Añadida traza desde [OBJ-0003] Gestionar Cliente]]></rem:description>
-</rem:change>
-<rem:change>
 <rem:type>S</rem:type>
-<rem:owner>CHS-0004</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>7</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>S</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>10</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>7</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento creado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>U</rem:type>
-<rem:owner>FRQ-0004</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Propiedad [Urgency] actualizada [inmediatamente] -> [puede esperar]]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>CHS-0004</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>7</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento creado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>S</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>7</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>S</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:owner>DFS-0003</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>7</rem:day>
@@ -129,60 +21,6 @@
 <rem:change>
 <rem:type>S</rem:type>
 <rem:owner>DRS-0002</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>10</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>S</rem:type>
-<rem:owner>DFS-0003</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>7</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [PRG-0002]  con 0 hijos y 1 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>S</rem:type>
-<rem:owner>DRS-0002</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>7</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>S</rem:type>
-<rem:owner>DFS-0003</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>7</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>DFS-0003</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>7</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento creado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>S</rem:type>
-<rem:owner>DFS-0003</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>10</rem:day>
@@ -200,6 +38,24 @@
 </rem:change>
 <rem:change>
 <rem:type>S</rem:type>
+<rem:owner>CHS-0004</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>7</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>S</rem:type>
+<rem:owner>DFS-0003</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>7</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>S</rem:type>
 <rem:owner>DRS-0002</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
@@ -208,13 +64,49 @@
 <rem:description><![CDATA[Documento guardado]]></rem:description>
 </rem:change>
 <rem:change>
-<rem:type>U</rem:type>
-<rem:owner>GRF-0001</rem:owner><rem:date>
+<rem:type>S</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>7</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
 </rem:date>
-<rem:description><![CDATA[Propiedad [FileName] actualizada [] -> [.\Principal.png]]]></rem:description>
+<rem:description><![CDATA[Eliminado el objeto [PRG-0002]  con 0 hijos y 1 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>S</rem:type>
+<rem:owner>CHS-0004</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>7</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>7</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento creado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>S</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
 </rem:change>
 <rem:change>
 <rem:type>S</rem:type>
@@ -226,58 +118,13 @@
 <rem:description><![CDATA[Documento guardado]]></rem:description>
 </rem:change>
 <rem:change>
-<rem:type>U</rem:type>
-<rem:owner>GRF-0003</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Propiedad [FileName] actualizada [.\Ventas.png] -> [.\Casos de uso-Proyecto Analisis y Diseño - Ventas.png]]]></rem:description>
-</rem:change>
-<rem:change>
 <rem:type>S</rem:type>
-<rem:owner>CHS-0004</rem:owner><rem:date>
+<rem:owner>DFS-0003</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
-<rem:day>11</rem:day>
+<rem:day>10</rem:day>
 </rem:date>
 <rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>U</rem:type>
-<rem:owner>GRF-0003</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Propiedad [FileName] actualizada [] -> [.\Ventas.png]]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>GRF-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Creación]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>GRF-0003</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Creación]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>U</rem:type>
-<rem:owner>GRF-0003</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Propiedad [FileName] actualizada [.\Casos de uso-Proyecto Analisis y Diseño - Ventas.png] -> [.\Ventas.png]]]></rem:description>
 </rem:change>
 <rem:change>
 <rem:type>S</rem:type>
@@ -289,17 +136,89 @@
 <rem:description><![CDATA[Documento guardado]]></rem:description>
 </rem:change>
 <rem:change>
-<rem:type>D</rem:type>
+<rem:type>S</rem:type>
 <rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>7</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>S</rem:type>
+<rem:owner>DRS-0002</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>7</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>DRS-0002</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>7</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento creado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>S</rem:type>
+<rem:owner>CHS-0004</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
 </rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0023] Eliminar medio de pago con 0 hijos y 0 cambios]]></rem:description>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>DFS-0003</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>7</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento creado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>S</rem:type>
+<rem:owner>DRS-0002</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>7</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>CHS-0004</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>7</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento creado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>S</rem:type>
+<rem:owner>DFS-0003</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0004</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Creación]]></rem:description>
 </rem:change>
 <rem:change>
 <rem:type>U</rem:type>
-<rem:owner>FRQ-0001</rem:owner><rem:date>
+<rem:owner>FRQ-0004</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
@@ -307,139 +226,76 @@
 <rem:description><![CDATA[Añadida traza desde [OBJ-0003] Gestionar Cliente]]></rem:description>
 </rem:change>
 <rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0010</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
 </rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0026] Implementar factura electrónica con 0 hijos y 0 cambios]]></rem:description>
+<rem:description><![CDATA[Creación]]></rem:description>
 </rem:change>
 <rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0005</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
 </rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0015] Generar reporte con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>U</rem:type>
-<rem:owner>FRQ-0003</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Propiedad [Urgency] actualizada [PD] -> [inmediatamente]]]></rem:description>
+<rem:description><![CDATA[Creación]]></rem:description>
 </rem:change>
 <rem:change>
 <rem:type>U</rem:type>
-<rem:owner>FRQ-0003</rem:owner><rem:date>
+<rem:owner>FRQ-0004</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
 </rem:date>
-<rem:description><![CDATA[Propiedad [Importance] actualizada [PD] -> [vital]]]></rem:description>
+<rem:description><![CDATA[Propiedad [Stability] actualizada [alta] -> [media]]]></rem:description>
 </rem:change>
 <rem:change>
-<rem:type>D</rem:type>
+<rem:type>S</rem:type>
 <rem:owner>CRS-0001</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
 </rem:date>
-<rem:description><![CDATA[Eliminado el objeto [FRQ-0004]  con 0 hijos y 1 cambios]]></rem:description>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
 </rem:change>
 <rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:type>S</rem:type>
+<rem:owner>DRS-0002</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
 </rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0021] Almacenar medios de pago con 0 hijos y 0 cambios]]></rem:description>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
 </rem:change>
 <rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:type>U</rem:type>
+<rem:owner>FRQ-0004</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
 </rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0008] Listar productos con 0 hijos y 0 cambios]]></rem:description>
+<rem:description><![CDATA[Propiedad [Urgency] actualizada [inmediatamente] -> [puede esperar]]]></rem:description>
 </rem:change>
 <rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0008</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
 </rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0022] Encriptar datos con 0 hijos y 0 cambios]]></rem:description>
+<rem:description><![CDATA[Creación]]></rem:description>
 </rem:change>
 <rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:type>S</rem:type>
+<rem:owner>CHS-0004</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
 </rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0024] Generar facturas con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0014] Listar ventas con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0007] Modificar producto con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0027] Buscar facturas con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0017] Contabilizar cancelación de pedidos con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0018] Bloquear usuario con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0013] Clasificar productos con 0 hijos y 0 cambios]]></rem:description>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
 </rem:change>
 <rem:change>
 <rem:type>D</rem:type>
@@ -457,124 +313,7 @@
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
 </rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0025] Organizar facturas con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0010] Calcular productos con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0020] Implementar métodos de pago con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0011] Notificar stock con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0012] Registrar venta con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>S</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>S</rem:type>
-<rem:owner>DFS-0003</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>FRQ-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Creación]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>S</rem:type>
-<rem:owner>DRS-0002</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Documento guardado]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0006] Registrar producto con 0 hijos y 0 cambios]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>U</rem:type>
-<rem:owner>FRQ-0003</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Propiedad [Status] actualizada [PD] -> [en construcción]]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>FRQ-0002</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Creación]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>FRQ-0003</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Creación]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>D</rem:type>
-<rem:owner>CRS-0001</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Eliminado el objeto [OBJ-0016] Establecer límite de pedido con 0 hijos y 0 cambios]]></rem:description>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0015] Generar reporte con 0 hijos y 0 cambios]]></rem:description>
 </rem:change>
 <rem:change>
 <rem:type>S</rem:type>
@@ -592,104 +331,347 @@
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
 </rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0024] Generar facturas con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0021] Almacenar medios de pago con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0022] Encriptar datos con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0012] Registrar venta con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0023] Eliminar medio de pago con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [FRQ-0004]  con 0 hijos y 1 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>S</rem:type>
+<rem:owner>DRS-0002</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>S</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
 <rem:description><![CDATA[Eliminado el objeto [OBJ-0009] Dar de baja un producto con 0 hijos y 0 cambios]]></rem:description>
 </rem:change>
 <rem:change>
-<rem:type>C</rem:type>
-<rem:owner>FRQ-0008</rem:owner><rem:date>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
 <rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0008] Listar productos con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0017] Contabilizar cancelación de pedidos con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0013] Clasificar productos con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0027] Buscar facturas con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0026] Implementar factura electrónica con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0007] Modificar producto con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>S</rem:type>
+<rem:owner>DFS-0003</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Documento guardado]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0006] Registrar producto con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0014] Listar ventas con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0018] Bloquear usuario con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0011] Notificar stock con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0016] Establecer límite de pedido con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0020] Implementar métodos de pago con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0010] Calcular productos con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [OBJ-0025] Organizar facturas con 0 hijos y 0 cambios]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0019</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>12</rem:day>
 </rem:date>
 <rem:description><![CDATA[Creación]]></rem:description>
 </rem:change>
 <rem:change>
 <rem:type>C</rem:type>
-<rem:owner>FRQ-0010</rem:owner><rem:date>
+<rem:owner>FRQ-0016</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
-<rem:day>11</rem:day>
+<rem:day>12</rem:day>
 </rem:date>
 <rem:description><![CDATA[Creación]]></rem:description>
 </rem:change>
 <rem:change>
 <rem:type>C</rem:type>
-<rem:owner>FRQ-0013</rem:owner><rem:date>
+<rem:owner>FRQ-0017</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
-<rem:day>11</rem:day>
+<rem:day>12</rem:day>
 </rem:date>
 <rem:description><![CDATA[Creación]]></rem:description>
 </rem:change>
 <rem:change>
 <rem:type>C</rem:type>
-<rem:owner>FRQ-0012</rem:owner><rem:date>
+<rem:owner>FRQ-0025</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Creación]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>FRQ-0011</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Creación]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>FRQ-0006</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Creación]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>FRQ-0014</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Creación]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>FRQ-0009</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
-</rem:date>
-<rem:description><![CDATA[Creación]]></rem:description>
-</rem:change>
-<rem:change>
-<rem:type>C</rem:type>
-<rem:owner>FRQ-0007</rem:owner><rem:date>
-<rem:year>2020</rem:year>
-<rem:month>8</rem:month>
-<rem:day>11</rem:day>
+<rem:day>12</rem:day>
 </rem:date>
 <rem:description><![CDATA[Creación]]></rem:description>
 </rem:change>
 <rem:change>
 <rem:type>U</rem:type>
-<rem:owner>FRQ-0004</rem:owner><rem:date>
+<rem:owner>FRQ-0019</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
-<rem:day>11</rem:day>
+<rem:day>12</rem:day>
 </rem:date>
-<rem:description><![CDATA[Propiedad [Stability] actualizada [alta] -> [media]]]></rem:description>
+<rem:description><![CDATA[Propiedad [Name] actualizada [Bloquear un cliente] -> [Bloquear cliente]]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>D</rem:type>
+<rem:owner>CRS-0001</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>12</rem:day>
+</rem:date>
+<rem:description><![CDATA[Eliminado el objeto [FRQ-0024]  con 0 hijos y 1 cambios]]></rem:description>
 </rem:change>
 <rem:change>
 <rem:type>C</rem:type>
-<rem:owner>FRQ-0005</rem:owner><rem:date>
+<rem:owner>FRQ-0021</rem:owner><rem:date>
 <rem:year>2020</rem:year>
 <rem:month>8</rem:month>
-<rem:day>11</rem:day>
+<rem:day>12</rem:day>
+</rem:date>
+<rem:description><![CDATA[Creación]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0023</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>12</rem:day>
+</rem:date>
+<rem:description><![CDATA[Creación]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0026</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>12</rem:day>
+</rem:date>
+<rem:description><![CDATA[Creación]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0024</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>12</rem:day>
+</rem:date>
+<rem:description><![CDATA[Creación]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0015</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>12</rem:day>
+</rem:date>
+<rem:description><![CDATA[Creación]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0020</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>12</rem:day>
+</rem:date>
+<rem:description><![CDATA[Creación]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0027</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>12</rem:day>
+</rem:date>
+<rem:description><![CDATA[Creación]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0018</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>12</rem:day>
+</rem:date>
+<rem:description><![CDATA[Creación]]></rem:description>
+</rem:change>
+<rem:change>
+<rem:type>C</rem:type>
+<rem:owner>FRQ-0022</rem:owner><rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>12</rem:day>
 </rem:date>
 <rem:description><![CDATA[Creación]]></rem:description>
 </rem:change>
