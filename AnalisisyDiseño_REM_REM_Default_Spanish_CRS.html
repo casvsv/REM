@@ -4728,7 +4728,4800 @@ Ninguno</td>
 <p />
 <a name="SEC-0014" />
 <h3 align="left">5.2.3 
-Casos de uso del sistema</h3><a name="SEC-0011" />
+Casos de uso del sistema</h3><a name="UC-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0001</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Registrar Cuenta</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 15/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0001" title="Registrar cuenta">
+                                [FRQ-0001] 
+Registrar cuenta</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+se presenta al cliente un formulario en el cual podrá registrarse en el sistema con los siguientes datos (nombre, apellido, cédula, teléfono, correo electrónico, fecha de nacimiento, dirección)</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1.El CLIENTE  tenga un correo y un numero de telefono activo
+<br />2.Se carga la interfaz REGISTRAR CUENTA
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="8">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0031" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+ingresa los datos en los campos  (nombre, apellido, cédula, teléfono, correo electrónico, fecha de nacimiento y dirección) en la interfaz REGISTRAR CUENTA.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0032" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Registrar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0033" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+valida los datos en los campos ingresados
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0034" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+registra los datos de la cuenta del cliente.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0035" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+muestra un mensaje de confirmación "Cuenta Registrada".</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0036" />
+<td align="center" valign="top">6</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Aceptar].</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0037" />
+<td align="center" valign="top">7</td>
+<td>El
+     
+    sistema<em>
+finaliza el Caso de Uso </em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1.El SISTEMA habrá registrado un cliente 
+<br />2.El SISTEMA redirecciona a la interfaz MENÚ PRINCIPAL</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0007" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+el cliente SELECCIONA OPCIÓN <a href="#GLO-0018" title="Anular un pedido.">CANCELAR</a>,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje emergente "Está seguro que desea <a href="#GLO-0018" title="Anular un pedido.">cancelar</a> el registro?"</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepción 3.2 </em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0008" />
+<td align="center" valign="top">3</td>
+<td>Si<em>,
+                            </em>el actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [sí]</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepción 3.3 </em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0026" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+selecciona la opción [sí],
+                            </em>el
+     
+    sistema<em>
+redirecciona a la interfaz REGISTRA CUENTA.</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0004" />
+<td align="center" valign="top">4</td>
+<td>Si<em>
+DATOS DEL CLIENTE INCORRECTO,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje de error "Verifique que los datos del cliente esté correctamente ingresados"</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+en el paso 1 del curso normal de eventos del Use Case "Registrar Cuenta"</em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0006" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+CLIENTE NO SE REGISTRÓ,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje de error "No se registró el cliente"</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+ en el paso 1 del curso normal de eventos del Use Case Registrar Cuenta</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0002</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Modificar Cuenta</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 15/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0002" title="Modificar datos personales">
+                                [FRQ-0002] 
+Modificar datos personales</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+describe las acciones que el cliente debe realizar para poder modificar los datos de la cuenta (nombre, apellido, dirección, telefono y  correo electrónico)</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El CLIENTE tenga una cuenta activa en el sistema
+<br />2. Se carga la interfaz MODIFICAR CUENTA
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="8">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0038" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+modifica los datos de los campos  (nombre, apellido, teléfono, correo electrónico y dirección) en la interfaz MODIFICAR CUENTA.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0039" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Modificar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0040" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+valida los datos en los campos ingresados
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0041" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+modifica los datos de la cuenta del cliente.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0042" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+muestra un mensaje de confirmación "Cuenta Modificada".</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0043" />
+<td align="center" valign="top">6</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Aceptar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0044" />
+<td align="center" valign="top">7</td>
+<td>El
+     
+    sistema<em>
+finaliza el Caso de Uso </em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. El SISTEMA modifica los datos de la cuenta del cliente 
+<br />2. El SISTEMA redirecciona a la interfaz MENÚ PRINCIPAL.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0009" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+el cliente SELECCIONA OPCIÓN <a href="#GLO-0018" title="Anular un pedido.">CANCELAR</a>,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje emergente "¿Está seguro que desea <a href="#GLO-0018" title="Anular un pedido.">cancelar</a> la modificación?"</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepción 3.2</em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0010" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+ muestra el mensaje emergente,
+                            </em>el actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [sí]</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepción 3.3
+<br />
+</em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0025" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+selecciona la opción [si],
+                            </em>el
+     
+    sistema<em>
+redirección a la interfaz MODIFICAR CUENTA</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0011" />
+<td align="center" valign="top">4</td>
+<td>Si<em>
+DATOS DEL CLIENTE INCORRECTO,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje de error "Verifique que los datos del cliente esté correctamente ingresados"</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+en el paso 1 del curso normal de eventos del Use Case "Modificar Cuenta"</em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0012" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+CLIENTE NO SE REGISTRÓ,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje de error ?No se Modificó la cuenta.</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+ en el paso 1 del curso normal de eventos del Use Case Modificar Cuenta</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0003" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0003</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Desactivar Cuenta</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 15/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0005" title="Desactivar cuenta">
+                                [FRQ-0005] 
+Desactivar cuenta</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+describe las acciones que el cliente debe realizar para poder desactivar su cuenta temporal o permanentemente</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El CLIENTE tenga una cuenta activa en el sistema
+<br />2. Se carga la interfaz MODIFICAR CUENTA
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="5">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0045" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Desactivar Cuenta]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0046" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+muestra un mensaje de emergente "¿Está seguro que desea desactivar la cuenta?".</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0047" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Aceptar].</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0048" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+finaliza El Caso de Uso </em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. El SISTEMA desactiva la cuenta del cliente 
+<br />2. El SISTEMA redirecciona a la interfaz INICIAR SESIÓN</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0015" />
+<td align="center" valign="top">4</td>
+<td>Si<em>
+SELECCIONA LA OPCIÓN <a href="#GLO-0018" title="Anular un pedido.">CANCELAR</a>.,
+                            </em>el
+     
+    sistema<em>
+redirecciona a la interfaz MODIFICAR CUENTA
+<br />
+</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0004" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0004</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Iniciar Sesión</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 15/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0039" title="Iniciar Sesión">
+                                [FRQ-0039] 
+Iniciar Sesión</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+UC describe las acciones a seguir por el Usuario para iniciar sesión en el sistema.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El CLIENTE tenga una cuenta activa en el sistema
+<br />2. Se carga la interfaz INICIO DE SESIÓN
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="7">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0053" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al usuario que iniciará sesión en el sistema.">
+Usuario (ACT-0001)
+    </a>
+<em>
+ingresa los datos de los campos  (Usuario o Correo y Contraseña) en la interfaz INICIO DE SESIÓN.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0054" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al usuario que iniciará sesión en el sistema.">
+Usuario (ACT-0001)
+    </a>
+<em>
+selecciona la opción [Ingresar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0055" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+valida los datos en los campos ingresados
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0056" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+muestra un mensaje de confirmación ?Bienvenido?.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0057" />
+<td align="center" valign="top">5</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al usuario que iniciará sesión en el sistema.">
+Usuario (ACT-0001)
+    </a>
+<em>
+selecciona la opción [Aceptar].</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0058" />
+<td align="center" valign="top">6</td>
+<td>El
+     
+    sistema<em>
+finaliza El Caso de Uso </em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. El SISTEMA redirecciona a la interfaz MENÚ PRINCIPAL.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0017" />
+<td align="center" valign="top">4</td>
+<td>Si<em>
+DATOS DEL CLIENTE INCORRECTOS,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje de error "No se inició sesión"
+<br />
+</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+en el paso 1 del curso normal de eventos del Use Case Iniciar Sesión
+<br />
+</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0005" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0005</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Cerrar sesión</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 15/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0040" title="Cerrar Sesión">
+                                [FRQ-0040] 
+Cerrar Sesión</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+permite al usuario cerrar sesión</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El USUARIO debe haber iniciado sesión</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="7">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0059" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al usuario que iniciará sesión en el sistema.">
+Usuario (ACT-0001)
+    </a>
+<em>
+selecciona la opción [Cerrar Sesión] en el MENÚ PRINCIPAL.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0060" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+envía mensaje de confirmación para el cierre de la sesión</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0061" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al usuario que iniciará sesión en el sistema.">
+Usuario (ACT-0001)
+    </a>
+<em>
+selecciona la opción [Aceptar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0062" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+guarda las acciones que el usuario haya realizado antes de salir.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0063" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+cierra la sesión de la cuenta.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0064" />
+<td align="center" valign="top">6</td>
+<td>El
+     
+    sistema<em>
+finaliza El Caso de Uso </em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. El USUARIO habrá podido cerrar su sesión dentro de la aplicación</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0019" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+EL USUARIO SELECCIONA LA OPCIÓN <a href="#GLO-0018" title="Anular un pedido.">CANCELAR</a>,
+                            </em>el
+     
+    sistema<em>
+se mantiene en el menú principal sin realizar cambios ni actualizaciones.</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">quedaría bien</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">puede esperar</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0006" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0006</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Realizar pago</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 15/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0006" title="Pagar pedido mediante transferencia bancaria">
+                                [FRQ-0006]  Pagar pedido mediante transferencia bancaria</a>
+</li>
+<li>
+<a href="#FRQ-0007" title="Pagar pedido mediante tarjeta de debito">
+                                [FRQ-0007]  Pagar pedido mediante tarjeta de debito</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+permite al cliente realizar el pago de los pedidos</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El CLIENTE debe haber iniciado sesión
+<br />2. El CLIENTE debe haber ingresado productos al carrito</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="9">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0065" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Carrito de Compras] en el MENÚ PRINCIPAL</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0066" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+carga la interfaz de CARRITO DE COMPRAS</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0067" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+carga los productos que se hayan añadido al carrito</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0068" />
+<td align="center" valign="top">4</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+revisa que los datos sean correctos</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0069" />
+<td align="center" valign="top">5</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Comprar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0070" />
+<td align="center" valign="top">6</td>
+<td>El
+     
+    sistema<em>
+ Presenta una notificación para que el cliente verifique su compra</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0071" />
+<td align="center" valign="top">7</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+Selecciona la opción [Aceptar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0072" />
+<td align="center" valign="top">8</td>
+<td>El
+     
+    sistema<em>
+finaliza El Caso de Uso </em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+2. El CLIENTE habrá pagado el pedido</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="5">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0020" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+LOS DATOS DEL CARRITO NO SON CORRECTO,
+                            </em>el actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Quitar] en los productos incorrectos
+<br />
+</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso 5.2 de excepciones</em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0024" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+el usuario selecciona la opción [Quitar],
+                            </em>el
+     
+    sistema<em>
+envía un mensaje de confirmación al usuario</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepción 5.3</em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0027" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+el sistema envia un mensaje de confirmación,
+                            </em>el actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Aceptar]</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepciones 5.4 </em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0028" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+el cliente selecciona la opción [Aceptar],
+                            </em>el
+     
+    sistema<em>
+elimina el producto del carrito de compras</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+en el paso 5 del curso normal de eventos del Use Case Realizar Pago</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0007" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0007</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Administrar medio de pago</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0008" title="Registrar medio de pago">
+                                [FRQ-0008] 
+Registrar medio de pago</a>
+</li>
+<li>
+<a href="#FRQ-0009" title="Eliminar medio de pago">
+                                [FRQ-0009] 
+Eliminar medio de pago</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+describe las acciones para registrar y eliminar los datos del medio de pago</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El CLIENTE tenga una cuenta activa en el sistema
+<br />2. Se carga la interfaz ADMINISTRAR MEDIO DE PAGO
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="7">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0073" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+ingresa los datos de los campos  (Titular de la cuenta, Número de tarjeta, CVV y fecha de expiración) en la interfaz ADMINISTRAR MEDIO DE PAGO.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0074" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Registrar tarjeta]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0075" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+valida los datos en los campos ingresados
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0076" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+muestra un mensaje emergente "Tarjeta registrada"</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0077" />
+<td align="center" valign="top">5</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Aceptar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0079" />
+<td align="center" valign="top">6</td>
+<td>El
+     
+    sistema<em>
+finaliza el Caso de Uso </em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. El SISTEMA redirecciona a la interfaz MENÚ INICIAL.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0037" />
+<td align="center" valign="top">2</td>
+<td>Si<em>
+el cliente SELECCIONA LA OPCIÓN <a href="#GLO-0018" title="Anular un pedido.">CANCELAR</a>,
+                            </em>el
+     
+    sistema<em>
+finaliza el caso de uso</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0029" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+SELECCIONA LA OPCIÓN ELIMINAR TARJETA,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje de confirmación "¿Está seguro que desea eliminar la tarjeta?"
+<br />
+</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepción 3.2 </em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0030" />
+<td align="center" valign="top">3</td>
+<td>Si<em>,
+                            </em>el actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [sí]</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepción 3.3 </em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0031" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+ la opción es [SÍ],
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje emergente "Tarjeta eliminada"
+<br />
+</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0032" />
+<td align="center" valign="top">4</td>
+<td>Si<em>
+DATOS DEL CLIENTE INCORRECTOS,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje de error "Asegúrese de ingresar los datos correctamente en los campos".</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+en el paso 1 del curso normal de eventos del Use Case Administrar Medio de Pago.</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0012" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0012</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Registrar Producto</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+registre los datos del producto (nombre, precio, tipo, cantidad, peso neto y descripción) en el <a href="#GLO-0006" title="La cantidad de productos en stock de la empresa.">inventario</a>.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> debe haber iniciado sesión.
+<br />2. Se carga la interfaz REGISTRAR PRODUCTO
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="9">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0113" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+ingresa los datos en los campos  (nombre, precio, cantidad, peso neto y descripción) en la interfaz REGISTRAR PRODUCTO.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0114" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona el tipo de producto de la opción tipo.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0115" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [Registrar]
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0116" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+valida los datos en los campos ingresados</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0117" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+registra los datos del producto</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0118" />
+<td align="center" valign="top">6</td>
+<td>El
+     
+    sistema<em>
+muestra un mensaje de confirmación "Producto Registrado"</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0119" />
+<td align="center" valign="top">7</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [Aceptar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0120" />
+<td align="center" valign="top">8</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. El SISTEMA registra un producto
+<br />2. El SISTEMA redirecciona a la interfaz MENÚ PRINCIPAL</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="7">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0066" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+<font color="red"><b>PD</b></font>,
+                            </em>el actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [<a href="#GLO-0018" title="Anular un pedido.">cancelar</a>].</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepcion 3.2</em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0067" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+<font color="red"><b>PD</b></font>,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje emergente "¿Está seguro que desea <a href="#GLO-0018" title="Anular un pedido.">cancelar</a> el registro?"
+<br />
+</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepción 3.3</em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0068" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+<font color="red"><b>PD</b></font>,
+                            </em>el actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [sí]</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepción 3.4</em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0069" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+el <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">distribuidor</a> selecciona la opción [sí],
+                            </em>el
+     
+    sistema<em>
+rediirección a la interfaz LISTAR PRODUCTOS</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0070" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+DATOS INCORRECTOS DEL PRODUCTO,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje de error "Verifique que los datos del producto estén correctamente ingresados"</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+                                (<em>
+en el paso 1 del curso normal de eventos del Use Case Registrar Producto.</em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0071" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+EL PRODUCTO NO SE REGISTRÓ,
+                            </em>el
+     
+    sistema<em>
+Muestra un mensaje de error ?No se registró el producto.</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+                                (<em>
+en el paso 1 del curso normal de eventos del Use Case Registrar Producto
+<br />
+</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0013" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0013</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Listar Productos</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0030" title="Listar Productos">
+                                [FRQ-0030] 
+Listar Productos</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+lista los productos disponibles de acuerdo a los criterios (nombre, precio, tipo, cantidad, peso neto y descripción).</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> debe estar registrado.
+<br />2. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> haya accedido al sistema.
+<br />3. El SISTEMA muestra la interfaz del LISTADO DE LOS PRODUCTOS.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="4">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0121" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+lista todos los productos existentes.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0122" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+muestra la lista de productos</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0128" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. Se visualizan todos los productos existentes.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0014" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0014</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Modificar Producto</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0031" title="Modificar Producto">
+                                [FRQ-0031] 
+Modificar Producto</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+modifique los datos de un producto (nombre, precio, tipo, cantidad, peso neto, y descripción).
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> ha iniciado sesión.
+<br />2. Se carga la interfaz LISTAR PRODUCTO
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="11">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0129" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona el botón [Modificar el producto seleccionado].</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0130" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+carga los datos del producto en la interfaz de MODIFICAR PRODUCTO</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0131" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+Cambia los datos en los campos  (nombre, precio, tipo, cantidad, peso neto, y descripción) en la interfaz MODIFICAR PRODUCTO.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0132" />
+<td align="center" valign="top">4</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona el tipo de producto de la opción tipo</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0230" />
+<td align="center" valign="top">5</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [Modificar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0231" />
+<td align="center" valign="top">6</td>
+<td>El
+     
+    sistema<em>
+valida los datos en los campos ingresados</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0232" />
+<td align="center" valign="top">7</td>
+<td>El
+     
+    sistema<em>
+modifica los datos del producto.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0233" />
+<td align="center" valign="top">8</td>
+<td>El
+     
+    sistema<em>
+muestra un mensaje de confirmación "Producto Modificado".</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0234" />
+<td align="center" valign="top">9</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [Aceptar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0133" />
+<td align="center" valign="top">10</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. El SISTEMA modifica un producto
+<br />2. El SISTEMA redirecciona a la interfaz LISTAR PRODUCTOS.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="5">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0093" />
+<td align="center" valign="top">6</td>
+<td>Si<em>
+el <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">Distribuidor</a> SELECCIONA OPCIÓN <a href="#GLO-0018" title="Anular un pedido.">CANCELAR</a>,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje emergente "¿Está seguro que desea <a href="#GLO-0018" title="Anular un pedido.">cancelar</a> el registro?"
+<br />
+</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepción 6.2</em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0094" />
+<td align="center" valign="top">6</td>
+<td>Si<em>,
+                            </em>el actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [sí]</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+al paso de excepción 6.3</em>)
+                            </td>
+</tr>
+<tr>
+<a name="STX-0095" />
+<td align="center" valign="top">6</td>
+<td>Si<em>
+opción [sí],
+                            </em>el
+     
+    sistema<em>
+redirección a la interfaz LISTAR PRODUCTO</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0091" />
+<td align="center" valign="top">7</td>
+<td>Si<em>
+DATOS INCORRECTOS DEL PRODUCTO ,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje de error "Verifique que los datos del producto estén correctamente ingresados"</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+en el paso 1 del curso normal de eventos del Use Case Modificar Producto</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0015" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0015</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Visualizar productos no disponibles</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0032" title="Visualizar productos no disponibles">
+                                [FRQ-0032] 
+Visualizar productos no disponibles</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+permite al <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">distribuidor</a> visualizar los productos que hayan sido marcados como ?no disponibles?.
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El CLIENTE debe haber iniciado sesión
+<br />2. El CLIENTE debe haber ingresado la interfaz LISTAR PRODUCTOS
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0134" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [Productos no disponibles]  en la interfaz LISTAR PRODUCTOS</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0135" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+carga la interfaz de PRODUCTOS NO DISPONIBLES</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0136" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+carga los productos que han sido marcados como ?No Disponibles?</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0137" />
+<td align="center" valign="top">4</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [Regresar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0138" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. El CLIENTE habrá podido visualizar los productos que ya no se encuentren disponibles
+<br />2. El SISTEMA redirecciona al CLIENTE a la interfaz LISTAR PRODUCTOS
+<br />
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0079" />
+<td align="center" valign="top">1</td>
+<td>Si<em>
+EL <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> HA SELECCIONADO <a href="#GLO-0018" title="Anular un pedido.">CANCELAR</a>,
+                            </em>el
+     
+    sistema<em>
+envía un mensaje de advertencia, indicando si está seguro de <a href="#GLO-0018" title="Anular un pedido.">cancelar</a> la modificación</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+                                (<em>
+en el paso 1 del curso normal de eventos del Use Case Modificar Producto.</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">puede esperar</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">media</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0016" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0016</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Listar Productos</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0037" title="Listar Productos">
+                                [FRQ-0037] 
+Listar Productos</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+liste los productos de acuerdo a los criterios de selección (nombre, precio, tipo).</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El USUARIO debe estar registrado.
+<br />2. El USUARIO haya accedido al sistema.
+<br />3. El SISTEMA muestra la interfaz del LISTADO DE LOS PRODUCTOS.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="4">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0139" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al usuario que iniciará sesión en el sistema.">
+Usuario (ACT-0001)
+    </a>
+<em>
+lista todos los productos existentes.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0140" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+muestra la lista de productos</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0141" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. Se visualizan todos los productos existentes.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0017" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0017</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Buscar Producto</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0038" title="Buscar Producto">
+                                [FRQ-0038] 
+Buscar Producto</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+busque los productos de acuerdo a los criterios de búsqueda (nombre, tipo).</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> debe estar registrado
+<br />2. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> haya accedido al sistema
+<br />3. El SISTEMA muestra la interfaz de BUSCAR PRODUCTO.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0142" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+ingresa el dato a buscar</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0143" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+presiona la opción [Buscar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0145" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+muestra todos los productos que coinciden con el dato escrito por el <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">distribuidor</a>.
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0146" />
+<td align="center" valign="top">4</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+visualiza todas las coincidencias.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0144" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. Se lista todos los productos disponibles</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0027" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0027</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Realizar Pedido</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0003" title="Realizar pedido">
+                                [FRQ-0003] 
+Realizar pedido</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+describe las acciones que el cliente debe realizar para el pedido de un producto o productos.
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El CLIENTE debe estar registrado
+<br />2. El CLIENTE debe haber accedido al sistema
+<br />3. El CLIENTE selecciona la interfaz REALIZAR PEDIDO</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0192" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona de la lista productos disponibles uno o varios productos.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0193" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [Realizar Pedido]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0194" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+verifica que al menos un producto haya sido seleccionado.
+<br />
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0195" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+muestra mediante un mensaje que el pedido se ha realizado con éxito.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0196" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. Se registró el pedido correctamente
+<br />2. Se notifica el pedido al <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">distribuidor</a>
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0080" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+EL CLIENTE HA SELECCIONADO <a href="#GLO-0018" title="Anular un pedido.">CANCELAR</a>,
+                            </em>el
+     
+    sistema<em>
+envía un mensaje de advertencia, indicando si está seguro de <a href="#GLO-0018" title="Anular un pedido.">cancelar</a> el pedido
+<br />
+</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+en el paso 1 del curso normal de eventos del Use Case Realizar Pedido</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0028" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0028</th>
+<th align="left" valign="top" width="100%" colspan="2">
+<a href="#GLO-0018" title="Anular un pedido.">Cancelar</a> Pedido</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0004" title="Cancelar pedido">
+                                [FRQ-0004]  Cancelar pedido</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+describe las acciones que el cliente debe realizar para poder <a href="#GLO-0018" title="Anular un pedido.">cancelar</a> un pedido en un intervalo de 5 minutos después de haber realizado la petición</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El CLIENTE debe estar registrado
+<br />2. El CLIENTE haya accedido al sistema
+<br />3. El CLIENTE selecciona la interfaz <a href="#GLO-0018" title="Anular un pedido.">CANCELAR</a> PEDIDO
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0197" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona de la lista de pedidos el pedido a <a href="#GLO-0018" title="Anular un pedido.">cancelar</a>.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0198" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona que utilizará la aplicación para realizar las compras.">
+Cliente (ACT-0003)
+    </a>
+<em>
+selecciona la opción [<a href="#GLO-0018" title="Anular un pedido.">Cancelar</a> Pedido(s) Seleccionado(s)]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0199" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+verifica que el pedido no haya excedido los 5 minutos.
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0200" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+verifica que el pedido no haya excedido los 5 minutos.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0201" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. Se cancela el pedido</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="3">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0081" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+EL CLIENTE HA SELECCIONADO REGRESAR,
+                            </em>el
+     
+    sistema<em>
+muestra la interfaz LISTAR PRODUCTOS
+<br />
+</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0082" />
+<td align="center" valign="top">4</td>
+<td>Si<em>
+EL PEDIDO HA EXCEDIDO LOS 5 MINUTOS,
+                            </em>el
+     
+    sistema<em>
+muestra mediante un mensaje de error que el pedido ha excedido los 5 minutos, por lo tanto, ya no pude ser cancelado.</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+en el paso 1 del curso normal de eventos del Use Case <a href="#GLO-0018" title="Anular un pedido.">Cancelar</a> Pedido</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0029" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0029</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Listar Ventas</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0035" title="Listar Ventas">
+                                [FRQ-0035] 
+Listar Ventas</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+describe los pasos a seguir por el <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">distribuidor</a> para listar las ventas de acuerdo a los criterios (Fecha de la venta, cantidad de productos, precio de la venta).</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> haya accedido al sistema
+<br />2. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> selecciona la interfaz LISTAR VENTAS
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0202" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona el criterio en la opción listar por
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0203" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [Buscar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0204" />
+<td align="center" valign="top">3</td>
+<td>
+    Se realiza el caso de uso
+<a href="&#xA;            #UC-0031">
+Buscar Ventas
+        (UC-0031)
+    </a></td>
+</tr>
+<tr>
+<a name="STP-0205" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+muestra las ventas de acuerdo al criterio.
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0206" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. El sistema lista las ventas buscadas</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0083" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+EL <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> NO HA SELECCIONADO AL MENOS UN CRITERIO,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje de alerta "No se ha seleccionado ningún criterio de Búsqueda"</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+en el paso 1 del curso normal de eventos del Use Case Listar Ventas</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">media</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0030" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0030</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Marcar Venta como completada</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0034" title="Marcar vera como completada">
+                                [FRQ-0034] 
+Marcar vera como completada</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+describe los pasos a seguir por el <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">distribuidor</a> para marcar como completada una venta, siempre que esta sea entregada al cliente.
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> haya accedido al sistema
+<br />2. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> selecciona la interfaz LISTAR VENTAS</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0207" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+seleccionar un checkbox en completada
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0208" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [Marcar como completada]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0209" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+guarda el estado de la venta a completada</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0210" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+se muestra la interfaz LISTAR VENTAS
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0211" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. Se marca una venta como completada</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">media</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0031" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0031</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Buscar Ventas</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0036" title="Bucar Ventas">
+                                [FRQ-0036] 
+Bucar Ventas</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+describe los pasos a seguir por el <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">distribuidor</a> para listar las ventas de acuerdo a los criterios (Fecha de la venta, cantidad de productos, precio de la venta).
+<br />
+</em>
+    o durante la realización de los siguientes casos de uso:
+<a href="&#xA;                #UC-0029">
+           [UC-0029]
+           
+Listar Ventas</a></td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> haya accedido al sistema
+<br />2. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> selecciona la interfaz LISTAR VENTAS</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="7">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0212" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona un criterio de búsqueda (Fecha de la venta, cantidad de productos, precio de la venta) en la opción listar por</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0213" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [Buscar]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0214" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+busca en las ventas de acuerdo al criterio de búsqueda</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0215" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+muestra las ventas de acuerdo al criterio de búsqueda</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0217" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+muestra la interfaz LISTAR VENTAS</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0216" />
+<td align="center" valign="top">6</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. Se listan las ventas de acuerdo a un criterio seleccionado</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0086" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+EL <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> NO HA SELECCIONADO AL MENOS UN CRITERIO,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje de alerta "No se ha seleccionado ningún criterio de Búsqueda"</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+en el paso 1 del curso normal de eventos del Use Case Buscar Venta
+<br />
+</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">media</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0032" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0032</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Modificar tiempo de cancelación</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0033" title="Modificar intervalo de tiempo">
+                                [FRQ-0033] 
+Modificar intervalo de tiempo</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+describe los pasos a seguir por el <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">distribuidor</a> para modificar el intervalo de tiempo para <a href="#GLO-0018" title="Anular un pedido.">cancelar</a> los pedidos.
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> haya accedido al sistema
+<br />2. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> selecciona la interfaz MODIFICAR TIEMPO DE CANCELACIÓN</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="7">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0218" />
+<td align="center" valign="top">1</td>
+<td>El
+     
+    sistema<em>
+muestra la información del tiempo Actual de Cancelación</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0219" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción establecer tiempo para fijar el nuevo tiempo de cancelación</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0220" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona la opción [Modificar Tiempo]</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0221" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+verifica si el tiempo establecido es un número positivo</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0222" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+muestra un mensaje de confirmación "El tiempo de cancelación para los pedidos será X".</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0223" />
+<td align="center" valign="top">6</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. Se modifica el tiempo de cancelación</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0088" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+EL TIEMPO ESTABLECIDO ES UN NÚMERO NEGATIVO,
+                            </em>el
+     
+    sistema<em>
+muestra un mensaje de error "El valor establecido no es válido".</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">quedaría bien</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">puede esperar</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0033" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0033</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Listar Facturas</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#FRQ-0026" title="Listar Facturas">
+                                [FRQ-0026] 
+Listar Facturas</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+lista todas las facturas que estén registradas en el sistema, presentado los criterios (Fecha de emisión, Apellidos de cliente, Intervalos de tiempo).</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El CLIENTE debe estar registrado.
+<br />2. El CLIENTE haya accedido al sistema.
+<br />3. El SISTEMA muestra la interfaz LISTAR FACTURAS</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0224" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+elije la opción para buscar.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0225" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+presiona la opción [Buscar].</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0226" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+muestra todas las facturas que coinciden con la opción seleccionada por el <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">distribuidor</a>.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0227" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+visualiza todas las coincidencias con la opción seleccionada.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0229" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. Se visualizan todos las facturas existentes.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0036" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0036</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Listar Clientes</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/08/2020 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+Alexis Cañar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+Brayan Collaguazo</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+César Salazar</a>
+<br />
+</li>
+<li>
+<a href="#STK-0004">
+Daniel Patiño</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Vanessa Iñiguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Diego Patiño</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+lista a los clientes de acuerdo a los diferentes criterios como (fecha de compra, cédula, apellido, frecuentes).</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+1. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> debe estar registrado.
+<br />2. El <a href="#GLO-0013" title="Que distribuye un producto para su comercialización, actuando de intermediario entre el productor y el detallista.">DISTRIBUIDOR</a> haya accedido al sistema.
+<br />3. El SISTEMA muestra la interfaz LISTAR CLIENTES</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="5">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0244" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+selecciona el criterio de listado de clientes de la opción listar por</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0245" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa a la persona encargada de administrar la aplicación y de controlar sus funciones especiales."> Distribuidor (ACT-0002)
+    </a>
+<em>
+presiona la opción [Buscar].</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0246" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+muestra la lista de clientes registrados.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0247" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+finaliza el caso de uso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+1. Se visualizan todos los clientes existentes.
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0011" />
 <h2 align="left">5.3 
 Requisitos no funcionales</h2><a name="NFR-0001" />
 <table border="1" width="100%">

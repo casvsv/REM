@@ -2048,6 +2048,2153 @@ Casos de uso del sistema</rem:name>
 Ninguno</rem:comments>
 <rem:level>3</rem:level>
 <rem:number>5.2.3 </rem:number>
+<rem:useCase
+ oid = "UC-0001">
+<rem:name>
+Registrar Cuenta</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+se presenta al cliente un formulario en el cual podrá registrarse en el sistema con los siguientes datos (nombre, apellido, cédula, teléfono, correo electrónico, fecha de nacimiento, dirección)</rem:triggeringEvent>
+<rem:precondition>
+1.El CLIENTE  tenga un correo y un numero de telefono activo<br/>2.Se carga la interfaz REGISTRAR CUENTA<br/></rem:precondition>
+<rem:postcondition>
+1.El SISTEMA habrá registrado un cliente <br/>2.El SISTEMA redirecciona a la interfaz MENÚ PRINCIPAL</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0031">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+ingresa los datos en los campos  (nombre, apellido, cédula, teléfono, correo electrónico, fecha de nacimiento y dirección) en la interfaz REGISTRAR CUENTA.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0032">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Registrar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0033">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+valida los datos en los campos ingresados<br/></rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0007">
+<rem:condition>
+el cliente SELECCIONA OPCIÓN <rem:ref oid="GLO-0018">CANCELAR</rem:ref></rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje emergente &quot;Está seguro que desea <rem:ref oid="GLO-0018">cancelar</rem:ref> el registro?&quot;</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepción 3.2 </rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0008">
+<rem:condition>
+</rem:condition>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [sí]</rem:description>
+</rem:actorAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepción 3.3 </rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0026">
+<rem:condition>
+selecciona la opción [sí]</rem:condition>
+<rem:systemAction>
+<rem:description>
+redirecciona a la interfaz REGISTRA CUENTA.</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0034">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+registra los datos de la cuenta del cliente.</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0004">
+<rem:condition>
+DATOS DEL CLIENTE INCORRECTO</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de error &quot;Verifique que los datos del cliente esté correctamente ingresados&quot;</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+en el paso 1 del curso normal de eventos del Use Case &quot;Registrar Cuenta&quot;</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0035">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de confirmación &quot;Cuenta Registrada&quot;.</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0006">
+<rem:condition>
+CLIENTE NO SE REGISTRÓ</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de error &quot;No se registró el cliente&quot;</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+ en el paso 1 del curso normal de eventos del Use Case Registrar Cuenta</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0036">
+<rem:number>6</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Aceptar].</rem:description>
+</rem:actorAction>
+<rem:comments>
+</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0037">
+<rem:number>7</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el Caso de Uso </rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0002">
+<rem:name>
+Modificar Cuenta</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+describe las acciones que el cliente debe realizar para poder modificar los datos de la cuenta (nombre, apellido, dirección, telefono y  correo electrónico)</rem:triggeringEvent>
+<rem:precondition>
+1. El CLIENTE tenga una cuenta activa en el sistema<br/>2. Se carga la interfaz MODIFICAR CUENTA<br/></rem:precondition>
+<rem:postcondition>
+1. El SISTEMA modifica los datos de la cuenta del cliente <br/>2. El SISTEMA redirecciona a la interfaz MENÚ PRINCIPAL.</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0038">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+modifica los datos de los campos  (nombre, apellido, teléfono, correo electrónico y dirección) en la interfaz MODIFICAR CUENTA.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0039">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Modificar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0040">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+valida los datos en los campos ingresados<br/></rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0009">
+<rem:condition>
+el cliente SELECCIONA OPCIÓN <rem:ref oid="GLO-0018">CANCELAR</rem:ref></rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje emergente &quot;¿Está seguro que desea <rem:ref oid="GLO-0018">cancelar</rem:ref> la modificación?&quot;</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepción 3.2</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0010">
+<rem:condition>
+ muestra el mensaje emergente</rem:condition>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [sí]</rem:description>
+</rem:actorAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepción 3.3<br/></rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0025">
+<rem:condition>
+selecciona la opción [si]</rem:condition>
+<rem:systemAction>
+<rem:description>
+redirección a la interfaz MODIFICAR CUENTA</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0041">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+modifica los datos de la cuenta del cliente.</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0011">
+<rem:condition>
+DATOS DEL CLIENTE INCORRECTO</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de error &quot;Verifique que los datos del cliente esté correctamente ingresados&quot;</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+en el paso 1 del curso normal de eventos del Use Case &quot;Modificar Cuenta&quot;</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0042">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de confirmación &quot;Cuenta Modificada&quot;.</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0012">
+<rem:condition>
+CLIENTE NO SE REGISTRÓ</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de error “No se Modificó la cuenta.</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+ en el paso 1 del curso normal de eventos del Use Case Modificar Cuenta</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0043">
+<rem:number>6</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Aceptar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0044">
+<rem:number>7</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el Caso de Uso </rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0003">
+<rem:name>
+Desactivar Cuenta</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+describe las acciones que el cliente debe realizar para poder desactivar su cuenta temporal o permanentemente</rem:triggeringEvent>
+<rem:precondition>
+1. El CLIENTE tenga una cuenta activa en el sistema<br/>2. Se carga la interfaz MODIFICAR CUENTA<br/></rem:precondition>
+<rem:postcondition>
+1. El SISTEMA desactiva la cuenta del cliente <br/>2. El SISTEMA redirecciona a la interfaz INICIAR SESIÓN</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0045">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Desactivar Cuenta]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0046">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de emergente &quot;¿Está seguro que desea desactivar la cuenta?&quot;.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0047">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Aceptar].</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0048">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza El Caso de Uso </rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0015">
+<rem:condition>
+SELECCIONA LA OPCIÓN <rem:ref oid="GLO-0018">CANCELAR</rem:ref>.</rem:condition>
+<rem:systemAction>
+<rem:description>
+redirecciona a la interfaz MODIFICAR CUENTA<br/></rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0004">
+<rem:name>
+Iniciar Sesión</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+UC describe las acciones a seguir por el Usuario para iniciar sesión en el sistema.</rem:triggeringEvent>
+<rem:precondition>
+1. El CLIENTE tenga una cuenta activa en el sistema<br/>2. Se carga la interfaz INICIO DE SESIÓN<br/></rem:precondition>
+<rem:postcondition>
+1. El SISTEMA redirecciona a la interfaz MENÚ PRINCIPAL.</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0053">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+ingresa los datos de los campos  (Usuario o Correo y Contraseña) en la interfaz INICIO DE SESIÓN.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0054">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+selecciona la opción [Ingresar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0055">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+valida los datos en los campos ingresados<br/></rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0056">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de confirmación “Bienvenido”.</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0017">
+<rem:condition>
+DATOS DEL CLIENTE INCORRECTOS</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de error &quot;No se inició sesión&quot;<br/></rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+en el paso 1 del curso normal de eventos del Use Case Iniciar Sesión<br/></rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0057">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+selecciona la opción [Aceptar].</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0058">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza El Caso de Uso </rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0005">
+<rem:name>
+Cerrar sesión</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0004"/>
+<rem:urgency value = "URV-0004"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0002"/>
+<rem:triggeringEvent>
+permite al usuario cerrar sesión</rem:triggeringEvent>
+<rem:precondition>
+1. El USUARIO debe haber iniciado sesión</rem:precondition>
+<rem:postcondition>
+1. El USUARIO habrá podido cerrar su sesión dentro de la aplicación</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0059">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+selecciona la opción [Cerrar Sesión] en el MENÚ PRINCIPAL.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0060">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+envía mensaje de confirmación para el cierre de la sesión</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0061">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+selecciona la opción [Aceptar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0062">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+guarda las acciones que el usuario haya realizado antes de salir.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0063">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+cierra la sesión de la cuenta.</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0019">
+<rem:condition>
+EL USUARIO SELECCIONA LA OPCIÓN <rem:ref oid="GLO-0018">CANCELAR</rem:ref></rem:condition>
+<rem:systemAction>
+<rem:description>
+se mantiene en el menú principal sin realizar cambios ni actualizaciones.</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0064">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza El Caso de Uso </rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0006">
+<rem:name>
+Realizar pago</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+permite al cliente realizar el pago de los pedidos</rem:triggeringEvent>
+<rem:precondition>
+1. El CLIENTE debe haber iniciado sesión<br/>2. El CLIENTE debe haber ingresado productos al carrito</rem:precondition>
+<rem:postcondition>
+2. El CLIENTE habrá pagado el pedido</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0065">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Carrito de Compras] en el MENÚ PRINCIPAL</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0066">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+carga la interfaz de CARRITO DE COMPRAS</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0067">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+carga los productos que se hayan añadido al carrito</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0068">
+<rem:number>4</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+revisa que los datos sean correctos</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0069">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Comprar]</rem:description>
+</rem:actorAction>
+<rem:stepException oid = "STX-0020">
+<rem:condition>
+LOS DATOS DEL CARRITO NO SON CORRECTO</rem:condition>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Quitar] en los productos incorrectos<br/></rem:description>
+</rem:actorAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso 5.2 de excepciones</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0024">
+<rem:condition>
+el usuario selecciona la opción [Quitar]</rem:condition>
+<rem:systemAction>
+<rem:description>
+envía un mensaje de confirmación al usuario</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepción 5.3</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0027">
+<rem:condition>
+el sistema envia un mensaje de confirmación</rem:condition>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Aceptar]</rem:description>
+</rem:actorAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepciones 5.4 </rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0028">
+<rem:condition>
+el cliente selecciona la opción [Aceptar]</rem:condition>
+<rem:systemAction>
+<rem:description>
+elimina el producto del carrito de compras</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+en el paso 5 del curso normal de eventos del Use Case Realizar Pago</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0070">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+ Presenta una notificación para que el cliente verifique su compra</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0071">
+<rem:number>7</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+Selecciona la opción [Aceptar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0072">
+<rem:number>8</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza El Caso de Uso </rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0007">
+<rem:name>
+Administrar medio de pago</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+describe las acciones para registrar y eliminar los datos del medio de pago</rem:triggeringEvent>
+<rem:precondition>
+1. El CLIENTE tenga una cuenta activa en el sistema<br/>2. Se carga la interfaz ADMINISTRAR MEDIO DE PAGO<br/></rem:precondition>
+<rem:postcondition>
+1. El SISTEMA redirecciona a la interfaz MENÚ INICIAL.</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0073">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+ingresa los datos de los campos  (Titular de la cuenta, Número de tarjeta, CVV y fecha de expiración) en la interfaz ADMINISTRAR MEDIO DE PAGO.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0074">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Registrar tarjeta]</rem:description>
+</rem:actorAction>
+<rem:stepException oid = "STX-0037">
+<rem:condition>
+el cliente SELECCIONA LA OPCIÓN <rem:ref oid="GLO-0018">CANCELAR</rem:ref></rem:condition>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0075">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+valida los datos en los campos ingresados<br/></rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0029">
+<rem:condition>
+SELECCIONA LA OPCIÓN ELIMINAR TARJETA</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de confirmación &quot;¿Está seguro que desea eliminar la tarjeta?&quot;<br/></rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepción 3.2 </rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0030">
+<rem:condition>
+</rem:condition>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [sí]</rem:description>
+</rem:actorAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepción 3.3 </rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0031">
+<rem:condition>
+ la opción es [SÍ]</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje emergente &quot;Tarjeta eliminada&quot;<br/></rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0076">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje emergente &quot;Tarjeta registrada&quot;</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0032">
+<rem:condition>
+DATOS DEL CLIENTE INCORRECTOS</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de error &quot;Asegúrese de ingresar los datos correctamente en los campos&quot;.</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+en el paso 1 del curso normal de eventos del Use Case Administrar Medio de Pago.</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0077">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Aceptar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0079">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el Caso de Uso </rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0012">
+<rem:name>
+Registrar Producto</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+registre los datos del producto (nombre, precio, tipo, cantidad, peso neto y descripción) en el <rem:ref oid="GLO-0006">inventario</rem:ref>.</rem:triggeringEvent>
+<rem:precondition>
+1. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> debe haber iniciado sesión.<br/>2. Se carga la interfaz REGISTRAR PRODUCTO<br/></rem:precondition>
+<rem:postcondition>
+1. El SISTEMA registra un producto<br/>2. El SISTEMA redirecciona a la interfaz MENÚ PRINCIPAL</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0113">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+ingresa los datos en los campos  (nombre, precio, cantidad, peso neto y descripción) en la interfaz REGISTRAR PRODUCTO.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0114">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona el tipo de producto de la opción tipo.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0115">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [Registrar]<br/></rem:description>
+</rem:actorAction>
+<rem:stepException oid = "STX-0066">
+<rem:condition>
+<rem:tbd/></rem:condition>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [<rem:ref oid="GLO-0018">cancelar</rem:ref>].</rem:description>
+</rem:actorAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepcion 3.2</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0067">
+<rem:condition>
+<rem:tbd/></rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje emergente &quot;¿Está seguro que desea <rem:ref oid="GLO-0018">cancelar</rem:ref> el registro?&quot;<br/></rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepción 3.3</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0068">
+<rem:condition>
+<rem:tbd/></rem:condition>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [sí]</rem:description>
+</rem:actorAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepción 3.4</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0069">
+<rem:condition>
+el <rem:ref oid="GLO-0013">distribuidor</rem:ref> selecciona la opción [sí]</rem:condition>
+<rem:systemAction>
+<rem:description>
+rediirección a la interfaz LISTAR PRODUCTOS</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0116">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+valida los datos en los campos ingresados</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0117">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+registra los datos del producto</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0070">
+<rem:condition>
+DATOS INCORRECTOS DEL PRODUCTO</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de error &quot;Verifique que los datos del producto estén correctamente ingresados&quot;</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+en el paso 1 del curso normal de eventos del Use Case Registrar Producto.</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0071">
+<rem:condition>
+EL PRODUCTO NO SE REGISTRÓ</rem:condition>
+<rem:systemAction>
+<rem:description>
+Muestra un mensaje de error “No se registró el producto.</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+en el paso 1 del curso normal de eventos del Use Case Registrar Producto<br/></rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0118">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de confirmación &quot;Producto Registrado&quot;</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0119">
+<rem:number>7</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [Aceptar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0120">
+<rem:number>8</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0013">
+<rem:name>
+Listar Productos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+lista los productos disponibles de acuerdo a los criterios (nombre, precio, tipo, cantidad, peso neto y descripción).</rem:triggeringEvent>
+<rem:precondition>
+1. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> debe estar registrado.<br/>2. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> haya accedido al sistema.<br/>3. El SISTEMA muestra la interfaz del LISTADO DE LOS PRODUCTOS.</rem:precondition>
+<rem:postcondition>
+1. Se visualizan todos los productos existentes.</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0121">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+lista todos los productos existentes.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0122">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la lista de productos</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0128">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0014">
+<rem:name>
+Modificar Producto</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+modifique los datos de un producto (nombre, precio, tipo, cantidad, peso neto, y descripción).<br/></rem:triggeringEvent>
+<rem:precondition>
+1. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> ha iniciado sesión.<br/>2. Se carga la interfaz LISTAR PRODUCTO<br/></rem:precondition>
+<rem:postcondition>
+1. El SISTEMA modifica un producto<br/>2. El SISTEMA redirecciona a la interfaz LISTAR PRODUCTOS.</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0129">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona el botón [Modificar el producto seleccionado].</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0130">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+carga los datos del producto en la interfaz de MODIFICAR PRODUCTO</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0131">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+Cambia los datos en los campos  (nombre, precio, tipo, cantidad, peso neto, y descripción) en la interfaz MODIFICAR PRODUCTO.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0132">
+<rem:number>4</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona el tipo de producto de la opción tipo</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0230">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [Modificar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0231">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+valida los datos en los campos ingresados</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0093">
+<rem:condition>
+el <rem:ref oid="GLO-0013">Distribuidor</rem:ref> SELECCIONA OPCIÓN <rem:ref oid="GLO-0018">CANCELAR</rem:ref></rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje emergente &quot;¿Está seguro que desea <rem:ref oid="GLO-0018">cancelar</rem:ref> el registro?&quot;<br/></rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepción 6.2</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0094">
+<rem:condition>
+</rem:condition>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [sí]</rem:description>
+</rem:actorAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+al paso de excepción 6.3</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0095">
+<rem:condition>
+opción [sí]</rem:condition>
+<rem:systemAction>
+<rem:description>
+redirección a la interfaz LISTAR PRODUCTO</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0232">
+<rem:number>7</rem:number>
+<rem:systemAction>
+<rem:description>
+modifica los datos del producto.</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0091">
+<rem:condition>
+DATOS INCORRECTOS DEL PRODUCTO </rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de error &quot;Verifique que los datos del producto estén correctamente ingresados&quot;</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+en el paso 1 del curso normal de eventos del Use Case Modificar Producto</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0233">
+<rem:number>8</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de confirmación &quot;Producto Modificado&quot;.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0234">
+<rem:number>9</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [Aceptar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0133">
+<rem:number>10</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0015">
+<rem:name>
+Visualizar productos no disponibles</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0004"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0003"/>
+<rem:triggeringEvent>
+permite al <rem:ref oid="GLO-0013">distribuidor</rem:ref> visualizar los productos que hayan sido marcados como “no disponibles”.<br/></rem:triggeringEvent>
+<rem:precondition>
+1. El CLIENTE debe haber iniciado sesión<br/>2. El CLIENTE debe haber ingresado la interfaz LISTAR PRODUCTOS<br/></rem:precondition>
+<rem:postcondition>
+1. El CLIENTE habrá podido visualizar los productos que ya no se encuentren disponibles<br/>2. El SISTEMA redirecciona al CLIENTE a la interfaz LISTAR PRODUCTOS<br/><br/></rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0134">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [Productos no disponibles]  en la interfaz LISTAR PRODUCTOS</rem:description>
+</rem:actorAction>
+<rem:stepException oid = "STX-0079">
+<rem:condition>
+EL <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> HA SELECCIONADO <rem:ref oid="GLO-0018">CANCELAR</rem:ref></rem:condition>
+<rem:systemAction>
+<rem:description>
+envía un mensaje de advertencia, indicando si está seguro de <rem:ref oid="GLO-0018">cancelar</rem:ref> la modificación</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+en el paso 1 del curso normal de eventos del Use Case Modificar Producto.</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0135">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+carga la interfaz de PRODUCTOS NO DISPONIBLES</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0136">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+carga los productos que han sido marcados como “No Disponibles”</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0137">
+<rem:number>4</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [Regresar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0138">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0016">
+<rem:name>
+Listar Productos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+liste los productos de acuerdo a los criterios de selección (nombre, precio, tipo).</rem:triggeringEvent>
+<rem:precondition>
+1. El USUARIO debe estar registrado.<br/>2. El USUARIO haya accedido al sistema.<br/>3. El SISTEMA muestra la interfaz del LISTADO DE LOS PRODUCTOS.</rem:precondition>
+<rem:postcondition>
+1. Se visualizan todos los productos existentes.</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0139">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+lista todos los productos existentes.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0140">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la lista de productos</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0141">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0017">
+<rem:name>
+Buscar Producto</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+busque los productos de acuerdo a los criterios de búsqueda (nombre, tipo).</rem:triggeringEvent>
+<rem:precondition>
+1. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> debe estar registrado<br/>2. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> haya accedido al sistema<br/>3. El SISTEMA muestra la interfaz de BUSCAR PRODUCTO.</rem:precondition>
+<rem:postcondition>
+1. Se lista todos los productos disponibles</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0142">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+ingresa el dato a buscar</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0143">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+presiona la opción [Buscar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0145">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra todos los productos que coinciden con el dato escrito por el <rem:ref oid="GLO-0013">distribuidor</rem:ref>.<br/></rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0146">
+<rem:number>4</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+visualiza todas las coincidencias.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0144">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0027">
+<rem:name>
+Realizar Pedido</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+describe las acciones que el cliente debe realizar para el pedido de un producto o productos.<br/></rem:triggeringEvent>
+<rem:precondition>
+1. El CLIENTE debe estar registrado<br/>2. El CLIENTE debe haber accedido al sistema<br/>3. El CLIENTE selecciona la interfaz REALIZAR PEDIDO</rem:precondition>
+<rem:postcondition>
+1. Se registró el pedido correctamente<br/>2. Se notifica el pedido al <rem:ref oid="GLO-0013">distribuidor</rem:ref><br/></rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0192">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona de la lista productos disponibles uno o varios productos.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0193">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [Realizar Pedido]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0194">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+verifica que al menos un producto haya sido seleccionado.<br/><br/></rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0080">
+<rem:condition>
+EL CLIENTE HA SELECCIONADO <rem:ref oid="GLO-0018">CANCELAR</rem:ref></rem:condition>
+<rem:systemAction>
+<rem:description>
+envía un mensaje de advertencia, indicando si está seguro de <rem:ref oid="GLO-0018">cancelar</rem:ref> el pedido<br/></rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+en el paso 1 del curso normal de eventos del Use Case Realizar Pedido</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0195">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra mediante un mensaje que el pedido se ha realizado con éxito.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0196">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0028">
+<rem:name>
+<rem:ref oid="GLO-0018">Cancelar</rem:ref> Pedido</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+describe las acciones que el cliente debe realizar para poder <rem:ref oid="GLO-0018">cancelar</rem:ref> un pedido en un intervalo de 5 minutos después de haber realizado la petición</rem:triggeringEvent>
+<rem:precondition>
+1. El CLIENTE debe estar registrado<br/>2. El CLIENTE haya accedido al sistema<br/>3. El CLIENTE selecciona la interfaz <rem:ref oid="GLO-0018">CANCELAR</rem:ref> PEDIDO<br/></rem:precondition>
+<rem:postcondition>
+1. Se cancela el pedido</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0197">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona de la lista de pedidos el pedido a <rem:ref oid="GLO-0018">cancelar</rem:ref>.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0198">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+selecciona la opción [<rem:ref oid="GLO-0018">Cancelar</rem:ref> Pedido(s) Seleccionado(s)]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0199">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+verifica que el pedido no haya excedido los 5 minutos.<br/></rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0081">
+<rem:condition>
+EL CLIENTE HA SELECCIONADO REGRESAR</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra la interfaz LISTAR PRODUCTOS<br/></rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0200">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+verifica que el pedido no haya excedido los 5 minutos.</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0082">
+<rem:condition>
+EL PEDIDO HA EXCEDIDO LOS 5 MINUTOS</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra mediante un mensaje de error que el pedido ha excedido los 5 minutos, por lo tanto, ya no pude ser cancelado.</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+en el paso 1 del curso normal de eventos del Use Case <rem:ref oid="GLO-0018">Cancelar</rem:ref> Pedido</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0201">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0029">
+<rem:name>
+Listar Ventas</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0003"/>
+<rem:triggeringEvent>
+describe los pasos a seguir por el <rem:ref oid="GLO-0013">distribuidor</rem:ref> para listar las ventas de acuerdo a los criterios (Fecha de la venta, cantidad de productos, precio de la venta).</rem:triggeringEvent>
+<rem:precondition>
+1. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> haya accedido al sistema<br/>2. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> selecciona la interfaz LISTAR VENTAS<br/></rem:precondition>
+<rem:postcondition>
+1. El sistema lista las ventas buscadas</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0202">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona el criterio en la opción listar por<br/></rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0203">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [Buscar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0204">
+<rem:number>3</rem:number>
+<rem:useCaseAction useCase = "UC-0031"/><rem:stepException oid = "STX-0083">
+<rem:condition>
+EL <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> NO HA SELECCIONADO AL MENOS UN CRITERIO</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de alerta &quot;No se ha seleccionado ningún criterio de Búsqueda&quot;</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+en el paso 1 del curso normal de eventos del Use Case Listar Ventas</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0205">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra las ventas de acuerdo al criterio.<br/></rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0206">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0030">
+<rem:name>
+Marcar Venta como completada</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0003"/>
+<rem:triggeringEvent>
+describe los pasos a seguir por el <rem:ref oid="GLO-0013">distribuidor</rem:ref> para marcar como completada una venta, siempre que esta sea entregada al cliente.<br/></rem:triggeringEvent>
+<rem:precondition>
+1. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> haya accedido al sistema<br/>2. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> selecciona la interfaz LISTAR VENTAS</rem:precondition>
+<rem:postcondition>
+1. Se marca una venta como completada</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0207">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+seleccionar un checkbox en completada<br/></rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0208">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [Marcar como completada]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0209">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+guarda el estado de la venta a completada</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0210">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+se muestra la interfaz LISTAR VENTAS<br/></rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0211">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0031">
+<rem:name>
+Buscar Ventas</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0003"/>
+<rem:triggeringEvent>
+describe los pasos a seguir por el <rem:ref oid="GLO-0013">distribuidor</rem:ref> para listar las ventas de acuerdo a los criterios (Fecha de la venta, cantidad de productos, precio de la venta).<br/></rem:triggeringEvent>
+<rem:precondition>
+1. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> haya accedido al sistema<br/>2. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> selecciona la interfaz LISTAR VENTAS</rem:precondition>
+<rem:postcondition>
+1. Se listan las ventas de acuerdo a un criterio seleccionado</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0212">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona un criterio de búsqueda (Fecha de la venta, cantidad de productos, precio de la venta) en la opción listar por</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0213">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [Buscar]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0214">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+busca en las ventas de acuerdo al criterio de búsqueda</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0086">
+<rem:condition>
+EL <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> NO HA SELECCIONADO AL MENOS UN CRITERIO</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de alerta &quot;No se ha seleccionado ningún criterio de Búsqueda&quot;</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+en el paso 1 del curso normal de eventos del Use Case Buscar Venta<br/></rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0215">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra las ventas de acuerdo al criterio de búsqueda</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0217">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la interfaz LISTAR VENTAS</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0216">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0032">
+<rem:name>
+Modificar tiempo de cancelación</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0004"/>
+<rem:urgency value = "URV-0004"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0002"/>
+<rem:triggeringEvent>
+describe los pasos a seguir por el <rem:ref oid="GLO-0013">distribuidor</rem:ref> para modificar el intervalo de tiempo para <rem:ref oid="GLO-0018">cancelar</rem:ref> los pedidos.<br/></rem:triggeringEvent>
+<rem:precondition>
+1. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> haya accedido al sistema<br/>2. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> selecciona la interfaz MODIFICAR TIEMPO DE CANCELACIÓN</rem:precondition>
+<rem:postcondition>
+1. Se modifica el tiempo de cancelación</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0218">
+<rem:number>1</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la información del tiempo Actual de Cancelación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0219">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción establecer tiempo para fijar el nuevo tiempo de cancelación</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0220">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción [Modificar Tiempo]</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0221">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+verifica si el tiempo establecido es un número positivo</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0222">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de confirmación &quot;El tiempo de cancelación para los pedidos será X&quot;.</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0088">
+<rem:condition>
+EL TIEMPO ESTABLECIDO ES UN NÚMERO NEGATIVO</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra un mensaje de error &quot;El valor establecido no es válido&quot;.</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0223">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0033">
+<rem:name>
+Listar Facturas</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+lista todas las facturas que estén registradas en el sistema, presentado los criterios (Fecha de emisión, Apellidos de cliente, Intervalos de tiempo).</rem:triggeringEvent>
+<rem:precondition>
+1. El CLIENTE debe estar registrado.<br/>2. El CLIENTE haya accedido al sistema.<br/>3. El SISTEMA muestra la interfaz LISTAR FACTURAS</rem:precondition>
+<rem:postcondition>
+1. Se visualizan todos las facturas existentes.</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0224">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+elije la opción para buscar.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0225">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+presiona la opción [Buscar].</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0226">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra todas las facturas que coinciden con la opción seleccionada por el <rem:ref oid="GLO-0013">distribuidor</rem:ref>.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0227">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+visualiza todas las coincidencias con la opción seleccionada.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0229">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0036">
+<rem:name>
+Listar Clientes</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2020</rem:year>
+<rem:month>8</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0005 STK-0004 STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+lista a los clientes de acuerdo a los diferentes criterios como (fecha de compra, cédula, apellido, frecuentes).</rem:triggeringEvent>
+<rem:precondition>
+1. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> debe estar registrado.<br/>2. El <rem:ref oid="GLO-0013">DISTRIBUIDOR</rem:ref> haya accedido al sistema.<br/>3. El SISTEMA muestra la interfaz LISTAR CLIENTES</rem:precondition>
+<rem:postcondition>
+1. Se visualizan todos los clientes existentes.<br/></rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0244">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona el criterio de listado de clientes de la opción listar por</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0245">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+presiona la opción [Buscar].</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0246">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la lista de clientes registrados.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0247">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+finaliza el caso de uso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
 </rem:section>
 </rem:section>
 <rem:section
@@ -3167,232 +5314,274 @@ Ninguno
 Ninguno
 </rem:comments>
 </rem:changeRequestsSpecification>
-<rem:trace source = "FRQ-0018"  target = "IRQ-0001" >
+<rem:trace source = "OBJ-0003"  target = "FRQ-0001" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "FRQ-0020"  target = "IRQ-0001" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0014"  target = "IRQ-0005" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0012"  target = "IRQ-0001" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0024"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0025"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0021"  target = "IRQ-0005" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0011"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0019"  target = "IRQ-0001" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0031"  target = "IRQ-0005" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0034"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0024"  target = "IRQ-0004" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0010"  target = "IRQ-0005" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0022"  target = "IRQ-0005" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0029"  target = "IRQ-0005" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0023"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0033"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0017"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0013"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0001"  target = "IRQ-0001" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0003"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0002"  target = "IRQ-0001" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0005"  target = "IRQ-0001" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0006"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0007"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0004"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0008"  target = "IRQ-0002" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "FRQ-0009"  target = "IRQ-0002" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0001"  target = "FRQ-0033" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0001"  target = "FRQ-0038" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0005"  target = "FRQ-0039" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0005"  target = "FRQ-0040" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0001"  target = "FRQ-0029" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0001"  target = "FRQ-0037" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0004"  target = "FRQ-0027" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0001"  target = "FRQ-0030" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0001"  target = "FRQ-0031" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0001"  target = "FRQ-0032" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0002"  target = "FRQ-0034" >
+<rem:trace source = "UC-0029"  target = "FRQ-0035" >
 <rem:isChecked/>
 </rem:trace>
 <rem:trace source = "OBJ-0003"  target = "FRQ-0028" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "OBJ-0002"  target = "FRQ-0036" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0002"  target = "FRQ-0035" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0004"  target = "FRQ-0007" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0004"  target = "FRQ-0008" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0004"  target = "FRQ-0009" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0003"  target = "FRQ-0012" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0003"  target = "FRQ-0001" >
+<rem:trace source = "OBJ-0003"  target = "FRQ-0018" >
 <rem:isChecked/>
 </rem:trace>
 <rem:trace source = "OBJ-0002"  target = "FRQ-0011" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "OBJ-0002"  target = "FRQ-0013" >
+<rem:trace source = "OBJ-0001"  target = "FRQ-0022" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "OBJ-0001"  target = "FRQ-0014" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0001"  target = "FRQ-0010" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0001"  target = "FRQ-0015" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0003"  target = "FRQ-0002" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0002"  target = "FRQ-0016" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0003"  target = "FRQ-0004" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0002"  target = "FRQ-0017" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0003"  target = "FRQ-0005" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0003"  target = "FRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "OBJ-0004"  target = "FRQ-0006" >
+<rem:trace source = "OBJ-0001"  target = "FRQ-0029" >
 <rem:isChecked/>
 </rem:trace>
 <rem:trace source = "OBJ-0002"  target = "FRQ-0024" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "OBJ-0002"  target = "FRQ-0026" >
+<rem:trace source = "OBJ-0001"  target = "FRQ-0037" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "OBJ-0003"  target = "FRQ-0019" >
+<rem:trace source = "OBJ-0005"  target = "FRQ-0040" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "OBJ-0002"  target = "FRQ-0023" >
+<rem:trace source = "FRQ-0001"  target = "IRQ-0001" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "OBJ-0003"  target = "FRQ-0018" >
+<rem:trace source = "OBJ-0001"  target = "FRQ-0030" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "OBJ-0002"  target = "FRQ-0025" >
+<rem:trace source = "FRQ-0002"  target = "IRQ-0001" >
 <rem:isChecked/>
 </rem:trace>
 <rem:trace source = "OBJ-0003"  target = "FRQ-0020" >
 <rem:isChecked/>
 </rem:trace>
+<rem:trace source = "OBJ-0003"  target = "FRQ-0012" >
+<rem:isChecked/>
+</rem:trace>
 <rem:trace source = "OBJ-0001"  target = "FRQ-0021" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "OBJ-0001"  target = "FRQ-0022" >
+<rem:trace source = "OBJ-0001"  target = "FRQ-0033" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0001"  target = "FRQ-0014" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0001"  target = "FRQ-0032" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0002"  target = "FRQ-0013" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0002"  target = "FRQ-0017" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0002"  target = "FRQ-0034" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0002"  target = "FRQ-0026" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0002"  target = "FRQ-0036" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0001"  target = "FRQ-0038" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0002"  target = "FRQ-0023" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0001"  target = "FRQ-0031" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0002"  target = "FRQ-0035" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0005"  target = "FRQ-0039" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0003"  target = "FRQ-0019" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0002"  target = "FRQ-0025" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0001"  target = "FRQ-0015" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0002"  target = "FRQ-0016" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0004"  target = "FRQ-0027" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0003"  target = "FRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0004"  target = "FRQ-0009" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0003"  target = "FRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0003"  target = "FRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0001"  target = "FRQ-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0003"  target = "FRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0004"  target = "FRQ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0004"  target = "FRQ-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0004"  target = "FRQ-0007" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0024"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0013"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0006"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0010"  target = "IRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0008"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0019"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0034"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0018"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0022"  target = "IRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0023"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0014"  target = "IRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0017"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0002"  target = "FRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0003"  target = "FRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0020"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0031"  target = "IRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0024"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0007"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0004"  target = "FRQ-0039" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0004"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0021"  target = "IRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0025"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0005"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0029"  target = "IRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0005"  target = "FRQ-0040" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "FRQ-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0012"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0003"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0011"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0033"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0001"  target = "FRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "FRQ-0009"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0014"  target = "FRQ-0031" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "FRQ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0017"  target = "FRQ-0038" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "FRQ-0009" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "FRQ-0007" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0015"  target = "FRQ-0032" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0013"  target = "FRQ-0030" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0016"  target = "FRQ-0037" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0033"  target = "FRQ-0026" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0030"  target = "FRQ-0034" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0031"  target = "FRQ-0036" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0032"  target = "FRQ-0033" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0028"  target = "FRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0027"  target = "FRQ-0003" >
 <rem:isChecked/>
 </rem:trace>
 <rem:predefinedValueTypes>
-<rem:predefinedValueType
- oid = "PVT-0003">
-<rem:name>
-Natural</rem:name>
-<rem:version>
-<rem:major>1</rem:major>
-<rem:minor>0</rem:minor>
-<rem:date>
-<rem:year>2000</rem:year>
-<rem:month>10</rem:month>
-<rem:day>30</rem:day>
-</rem:date>
-</rem:version>
-<rem:comments>
-Predefined OCL type</rem:comments>
-<rem:description>
-Natural numbers</rem:description>
-<rem:definition>
-(null)
-</rem:definition>
-</rem:predefinedValueType>
 <rem:predefinedValueType
  oid = "PVT-0004">
 <rem:name>
@@ -3431,6 +5620,27 @@ Date</rem:name>
 Predefined OCL type (non-standard)</rem:comments>
 <rem:description>
 Dates</rem:description>
+<rem:definition>
+(null)
+</rem:definition>
+</rem:predefinedValueType>
+<rem:predefinedValueType
+ oid = "PVT-0006">
+<rem:name>
+Time</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2000</rem:year>
+<rem:month>10</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Predefined OCL type (non-standard)</rem:comments>
+<rem:description>
+Hour:minutes:seconds</rem:description>
 <rem:definition>
 (null)
 </rem:definition>
@@ -3478,9 +5688,9 @@ Integer numbers</rem:description>
 </rem:definition>
 </rem:predefinedValueType>
 <rem:predefinedValueType
- oid = "PVT-0006">
+ oid = "PVT-0003">
 <rem:name>
-Time</rem:name>
+Natural</rem:name>
 <rem:version>
 <rem:major>1</rem:major>
 <rem:minor>0</rem:minor>
@@ -3491,23 +5701,17 @@ Time</rem:name>
 </rem:date>
 </rem:version>
 <rem:comments>
-Predefined OCL type (non-standard)</rem:comments>
+Predefined OCL type</rem:comments>
 <rem:description>
-Hour:minutes:seconds</rem:description>
+Natural numbers</rem:description>
 <rem:definition>
 (null)
 </rem:definition>
 </rem:predefinedValueType>
 </rem:predefinedValueTypes>
 <rem:predefinedValues>
-<rem:changeRequestStatusValue oid = "CRV-0005">
-<rem:name>verificado</rem:name>
-</rem:changeRequestStatusValue>
-<rem:changeRequestStatusValue oid = "CRV-0002">
-<rem:name>pendiente de análisis</rem:name>
-</rem:changeRequestStatusValue>
-<rem:changeRequestStatusValue oid = "CRV-0006">
-<rem:name>rechazado</rem:name>
+<rem:changeRequestStatusValue oid = "CRV-0001">
+<rem:name>PD</rem:name>
 </rem:changeRequestStatusValue>
 <rem:changeRequestStatusValue oid = "CRV-0003">
 <rem:name>pendiente de aprobar/rechazar</rem:name>
@@ -3515,14 +5719,17 @@ Hour:minutes:seconds</rem:description>
 <rem:changeRequestStatusValue oid = "CRV-0004">
 <rem:name>pendiente de realización</rem:name>
 </rem:changeRequestStatusValue>
-<rem:changeRequestStatusValue oid = "CRV-0001">
-<rem:name>PD</rem:name>
+<rem:changeRequestStatusValue oid = "CRV-0002">
+<rem:name>pendiente de análisis</rem:name>
+</rem:changeRequestStatusValue>
+<rem:changeRequestStatusValue oid = "CRV-0005">
+<rem:name>verificado</rem:name>
+</rem:changeRequestStatusValue>
+<rem:changeRequestStatusValue oid = "CRV-0006">
+<rem:name>rechazado</rem:name>
 </rem:changeRequestStatusValue>
 <rem:conflictStatusValue oid = "CSV-0001">
 <rem:name>PD</rem:name>
-</rem:conflictStatusValue>
-<rem:conflictStatusValue oid = "CSV-0004">
-<rem:name>resuelto</rem:name>
 </rem:conflictStatusValue>
 <rem:conflictStatusValue oid = "CSV-0002">
 <rem:name>no resuelto</rem:name>
@@ -3530,46 +5737,31 @@ Hour:minutes:seconds</rem:description>
 <rem:conflictStatusValue oid = "CSV-0003">
 <rem:name>en proceso de negociación</rem:name>
 </rem:conflictStatusValue>
+<rem:conflictStatusValue oid = "CSV-0004">
+<rem:name>resuelto</rem:name>
+</rem:conflictStatusValue>
 <rem:defectStatusValue oid = "DSV-0001">
 <rem:name>PD</rem:name>
-</rem:defectStatusValue>
-<rem:defectStatusValue oid = "DSV-0002">
-<rem:name>no eliminado</rem:name>
 </rem:defectStatusValue>
 <rem:defectStatusValue oid = "DSV-0003">
 <rem:name>en proceso de negociación</rem:name>
 </rem:defectStatusValue>
+<rem:defectStatusValue oid = "DSV-0002">
+<rem:name>no eliminado</rem:name>
+</rem:defectStatusValue>
 <rem:defectStatusValue oid = "DSV-0004">
 <rem:name>eliminado</rem:name>
 </rem:defectStatusValue>
-<rem:defectTypeValue oid = "DTV-0012">
-<rem:name>Incompleción</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no describen todo lo que el sistema se supone que deberá hacer, no describen las respuestas del sistema a todas las posibles situaciones o incluyen elementos por determinar (PD)]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0013">
-<rem:name>Prioridad no establecida</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no tienen establecida su prioridad, es decir, su importancia y su urgencia]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0008">
-<rem:name>Verbosidad excesiva</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos pueden expresarse de forma más concisa sin alterar su significado]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0014">
-<rem:name>Estabilidad no establecida</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no tienen estimada su estabilidad]]>
-</rem:description>
-</rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0003">
 <rem:name>No necesidad</rem:name>
 <rem:description>
 <![CDATA[El requisito o requisitos no son necesarios porque no contribuyen a satisfacer ninguna necesidad de clientes o usuarios]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0007">
+<rem:name>No implementabilidad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no pueden ser implementados con la tecnología actual o dentro de un coste razonable]]>
 </rem:description>
 </rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0001">
@@ -3578,22 +5770,22 @@ Hour:minutes:seconds</rem:description>
 <![CDATA[Por Determinar]]>
 </rem:description>
 </rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0004">
-<rem:name>Incomprensibilidad</rem:name>
+<rem:defectTypeValue oid = "DTV-0008">
+<rem:name>Verbosidad excesiva</rem:name>
 <rem:description>
-<![CDATA[El requisito o requisitos no pueden ser entendidos por algún lector]]>
+<![CDATA[El requisito o requisitos pueden expresarse de forma más concisa sin alterar su significado]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0009">
+<rem:name>Dependiente del diseño</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos incluyen elementos dependientes del diseño del sistema]]>
 </rem:description>
 </rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0006">
 <rem:name>Inconsistencia</rem:name>
 <rem:description>
 <![CDATA[El requisito o requisitos no son consistentes, es decir, presentan contradicciones internas o entre varios]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0007">
-<rem:name>No implementabilidad</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no pueden ser implementados con la tecnología actual o dentro de un coste razonable]]>
 </rem:description>
 </rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0010">
@@ -3608,28 +5800,34 @@ Hour:minutes:seconds</rem:description>
 <![CDATA[El requisito o requisitos, aunque comprensibles, tienen más de una interpretación posible]]>
 </rem:description>
 </rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0004">
+<rem:name>Incomprensibilidad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no pueden ser entendidos por algún lector]]>
+</rem:description>
+</rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0005">
 <rem:name>No verificabilidad</rem:name>
 <rem:description>
 <![CDATA[No se puede comprobar que el sistema satisface el requisito o requisitos]]>
 </rem:description>
 </rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0009">
-<rem:name>Dependiente del diseño</rem:name>
+<rem:defectTypeValue oid = "DTV-0014">
+<rem:name>Estabilidad no establecida</rem:name>
 <rem:description>
-<![CDATA[El requisito o requisitos incluyen elementos dependientes del diseño del sistema]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0011">
-<rem:name>Imprecisión</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no se expresan de forma precisa, es decir, usando cantidades numéricas siempre que sea posible con el nivel adecuado de precisión]]>
+<![CDATA[El requisito o requisitos no tienen estimada su estabilidad]]>
 </rem:description>
 </rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0015">
 <rem:name>Nivel incorrecto de detalle</rem:name>
 <rem:description>
 <![CDATA[El requisito o requisitos no están expresados con el nivel adecuado de detalle, es decir, son demasiado abstractos o demasiado detallados]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0016">
+<rem:name>No rastreabilidad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no están trazados hacia sus orígenes, bien requisitos de nivel superior (objetivos), bien clientes y usuarios]]>
 </rem:description>
 </rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0017">
@@ -3644,50 +5842,62 @@ Hour:minutes:seconds</rem:description>
 <![CDATA[El requisito o requisitos presentan otro tipo de defecto]]>
 </rem:description>
 </rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0016">
-<rem:name>No rastreabilidad</rem:name>
+<rem:defectTypeValue oid = "DTV-0012">
+<rem:name>Incompleción</rem:name>
 <rem:description>
-<![CDATA[El requisito o requisitos no están trazados hacia sus orígenes, bien requisitos de nivel superior (objetivos), bien clientes y usuarios]]>
+<![CDATA[El requisito o requisitos no describen todo lo que el sistema se supone que deberá hacer, no describen las respuestas del sistema a todas las posibles situaciones o incluyen elementos por determinar (PD)]]>
 </rem:description>
 </rem:defectTypeValue>
-<rem:importanceValue oid = "IMV-0003">
-<rem:name>importante</rem:name>
-</rem:importanceValue>
+<rem:defectTypeValue oid = "DTV-0011">
+<rem:name>Imprecisión</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no se expresan de forma precisa, es decir, usando cantidades numéricas siempre que sea posible con el nivel adecuado de precisión]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0013">
+<rem:name>Prioridad no establecida</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no tienen establecida su prioridad, es decir, su importancia y su urgencia]]>
+</rem:description>
+</rem:defectTypeValue>
 <rem:importanceValue oid = "IMV-0002">
 <rem:name>vital</rem:name>
-</rem:importanceValue>
-<rem:importanceValue oid = "IMV-0004">
-<rem:name>quedaría bien</rem:name>
 </rem:importanceValue>
 <rem:importanceValue oid = "IMV-0001">
 <rem:name>PD</rem:name>
 </rem:importanceValue>
-<rem:stabilityValue oid = "SBV-0004">
-<rem:name>alta</rem:name>
+<rem:importanceValue oid = "IMV-0003">
+<rem:name>importante</rem:name>
+</rem:importanceValue>
+<rem:importanceValue oid = "IMV-0004">
+<rem:name>quedaría bien</rem:name>
+</rem:importanceValue>
+<rem:stabilityValue oid = "SBV-0001">
+<rem:name>PD</rem:name>
 </rem:stabilityValue>
 <rem:stabilityValue oid = "SBV-0002">
 <rem:name>baja</rem:name>
 </rem:stabilityValue>
+<rem:stabilityValue oid = "SBV-0004">
+<rem:name>alta</rem:name>
+</rem:stabilityValue>
 <rem:stabilityValue oid = "SBV-0003">
 <rem:name>media</rem:name>
 </rem:stabilityValue>
-<rem:stabilityValue oid = "SBV-0001">
-<rem:name>PD</rem:name>
-</rem:stabilityValue>
+<rem:statusValue oid = "STV-0003">
+<rem:name>pendiente de verificación</rem:name>
+</rem:statusValue>
 <rem:statusValue oid = "STV-0001">
 <rem:name>PD</rem:name>
 </rem:statusValue>
 <rem:statusValue oid = "STV-0002">
 <rem:name>en construcción</rem:name>
 </rem:statusValue>
-<rem:statusValue oid = "STV-0005">
-<rem:name>validado</rem:name>
-</rem:statusValue>
 <rem:statusValue oid = "STV-0004">
 <rem:name>pendiente de validación</rem:name>
 </rem:statusValue>
-<rem:statusValue oid = "STV-0003">
-<rem:name>pendiente de verificación</rem:name>
+<rem:statusValue oid = "STV-0005">
+<rem:name>validado</rem:name>
 </rem:statusValue>
 <rem:terminationValue oid = "TEV-0003">
 <rem:name>queda sin efecto</rem:name>
@@ -3701,17 +5911,17 @@ Hour:minutes:seconds</rem:description>
 <rem:timeUnitValue oid = "TUV-0002">
 <rem:name>año(s)</rem:name>
 </rem:timeUnitValue>
-<rem:timeUnitValue oid = "TUV-0001">
-<rem:name>PD</rem:name>
-</rem:timeUnitValue>
 <rem:timeUnitValue oid = "TUV-0005">
 <rem:name>mes(es)</rem:name>
 </rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0007">
+<rem:name>semana(s)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0001">
+<rem:name>PD</rem:name>
+</rem:timeUnitValue>
 <rem:timeUnitValue oid = "TUV-0009">
 <rem:name>hora(s)</rem:name>
-</rem:timeUnitValue>
-<rem:timeUnitValue oid = "TUV-0012">
-<rem:name>décima(s) de segundo</rem:name>
 </rem:timeUnitValue>
 <rem:timeUnitValue oid = "TUV-0010">
 <rem:name>minuto(s)</rem:name>
@@ -3719,14 +5929,14 @@ Hour:minutes:seconds</rem:description>
 <rem:timeUnitValue oid = "TUV-0011">
 <rem:name>segundo(s)</rem:name>
 </rem:timeUnitValue>
-<rem:timeUnitValue oid = "TUV-0013">
-<rem:name>centésima(s) de segundo</rem:name>
-</rem:timeUnitValue>
-<rem:timeUnitValue oid = "TUV-0007">
-<rem:name>semana(s)</rem:name>
-</rem:timeUnitValue>
 <rem:timeUnitValue oid = "TUV-0008">
 <rem:name>día(s)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0012">
+<rem:name>décima(s) de segundo</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0013">
+<rem:name>centésima(s) de segundo</rem:name>
 </rem:timeUnitValue>
 <rem:timeUnitValue oid = "TUV-0014">
 <rem:name>milisegundo(s)</rem:name>
@@ -3734,14 +5944,14 @@ Hour:minutes:seconds</rem:description>
 <rem:urgencyValue oid = "URV-0003">
 <rem:name>hay presión</rem:name>
 </rem:urgencyValue>
-<rem:urgencyValue oid = "URV-0004">
-<rem:name>puede esperar</rem:name>
-</rem:urgencyValue>
 <rem:urgencyValue oid = "URV-0002">
 <rem:name>inmediatamente</rem:name>
 </rem:urgencyValue>
 <rem:urgencyValue oid = "URV-0001">
 <rem:name>PD</rem:name>
+</rem:urgencyValue>
+<rem:urgencyValue oid = "URV-0004">
+<rem:name>puede esperar</rem:name>
 </rem:urgencyValue>
 </rem:predefinedValues>
 </rem:requirementsProject>
